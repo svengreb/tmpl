@@ -1,0 +1,20 @@
+{
+  "name": "tmpl",
+  "version": "0.0.0",
+  "description": "A collection of repository templates for new projects",
+  "author": {
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
+  },
+  "homepage": "https://github.com/svengreb/tmpl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svengreb/tmpl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/svengreb/tmpl/issues"
+  },
+  "private": true,
+  "license": "MIT"
+}
