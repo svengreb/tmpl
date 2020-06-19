@@ -2,7 +2,9 @@
 # This source code is licensed under the MIT license found in the LICENSE file.
 
 # See:
-#   1. https://yarnpkg.com/docs
+#   1. https://git-scm.com/docs/gitignore
 
-# Resolve to latest minor and patch updates.
-save-prefix "^"
+# +---------+
+# + Node.js +
+# +---------+
+**/node_modules/
