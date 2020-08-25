@@ -3,7 +3,5 @@
 
 # Configuration for Git mail mapping feature to coalesce together commits by the same person in the shortlog,
 # where their name and/or email address was spelled differently or has been changed.
-#
-# See:
-#   1. https://git-scm.com/docs/git-shortlog#_mapping_authors
+# See https://git-scm.com/docs/git-shortlog#_mapping_authors for more details.
 Sven Greb <development@svengreb.de>

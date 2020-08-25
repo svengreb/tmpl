@@ -1,12 +1,10 @@
 # Copyright (c) 2020-present Sven Greb <development@svengreb.de>
 # This source code is licensed under the MIT license found in the LICENSE file.
 
-# References:
+# Configuration to define attributes per path.
+# See the following references for more details:
 #   - https://git-scm.com/docs/gitattributes
 #   - https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion
-#   - https://github.com/AGWA/git-crypt
-#   - https://www.gnupg.org
-#   - https://wiki.archlinux.org/index.php/GnuPG
 
 # Automatically perform line feed (LF) normalization for files detected as text and
 # leave all files detected as binary untouched.
@@ -21,5 +19,7 @@
 # +------------+
 # + Encryption +
 # +------------+
+# Ensure to exclude Git related files for usage with "git-crypt".
+# See https://github.com/AGWA/git-crypt for more details.
 .gitattributes !filter !diff
 .gitignore !filter !diff
