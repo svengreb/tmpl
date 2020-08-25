@@ -1,8 +1,8 @@
 # Copyright (c) 2020-present Sven Greb <development@svengreb.de>
 # This source code is licensed under the MIT license found in the LICENSE file.
 
-# See:
-#   1. https://git-scm.com/docs/gitignore
+# Configuration to specify paths to ignore.
+# See https://git-scm.com/docs/gitignore for more details.
 
 # +---------+
 # + Node.js +
