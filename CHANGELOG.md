@@ -2,9 +2,7 @@
 
 <p align="center"><a href="https://github.com/svengreb/tmpl/releases/latest"><img src="https://img.shields.io/github/release/svengreb/tmpl.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
-
-<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord" target="_blank">Nord</a> website and documentation</p>
+<p align="center">Changelog for the collection of <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository" target="_blank">repository templates</a> for new projects.</p>
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
