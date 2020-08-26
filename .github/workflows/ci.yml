@@ -1,0 +1,34 @@
+# Copyright (c) 2020-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the LICENSE file.
+
+# GitHub Action Workflow for continuous integration jobs.
+# See https://docs.github.com/en/actions and https://github.com/features/actions for more details.
+
+name: CI
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+    steps:
+      - name: Print metadata and context information
+        env:
+          TMPL_GITHUB_ACTION_CONTEXT_RUNNER: ${{ toJson(runner) }}
+        run: |
+          echo "Git SHA: $GITHUB_SHA"
+          echo "Git Ref: $GITHUB_REF"
+          echo "Workflow Actor: $GITHUB_ACTOR"
+          echo "GitHub Action Runner: $TMPL_GITHUB_ACTION_CONTEXT_RUNNER"
+      - name: Checkout repository
+        uses: actions/checkout@master
+      - name: "Setup Node.js version ${{ matrix.node-version }}"
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Node modules
+        run: yarn --frozen-lockfile
+      - name: Run linter
+        run: yarn lint
