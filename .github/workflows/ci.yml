@@ -5,8 +5,13 @@
 # See https://docs.github.com/en/actions and https://github.com/features/actions for more details.
 
 name: CI
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*
+  pull_request:
 jobs:
   lint:
     runs-on: ubuntu-latest
