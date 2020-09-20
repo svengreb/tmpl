@@ -6,6 +6,59 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.2.0
+
+![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/5) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/2)
+
+⇅ [Show all commits][gh-compare-tag-v0.1.0_v0.2.0]
+
+## Features
+
+<details>
+<summary><strong>Git ignore pattern for Yarn and JetBrains products</strong> — #39 ⇄ #40 (⊶ 5d2ce0c0)</summary>
+
+↠ Before there were only ignore pattern for the Node.js `node_modules` folder, but specific pattern for [Yarn][] were missing.
+Because the fantastic [JetBrains products][jetbrains] like [GoLand][] (or respectively [IntelliJ][] with the [official Go plugin][jetbrains-plugins]) are an integral part of my daily toolbox the pattern have also been added.
+
+</details>
+
+## Improvements
+
+<details>
+<summary><strong>More fine-grained GitHub Action trigger configuration</strong> — #34 ⇄ #35 (⊶ c184ae8b)</summary>
+
+↠ The _CI_ GitHub Action Workflow used the `push` setting for the `on` field in order to trigger the workflow. That was superficial and the workflow ran for every new commit and PR.
+
+To improve this behavior and prevent unnecessary workflow runs the [`push` field][gh-docs-actions-wf#on_push_pull] of [the `on` field][gh-docs-actions-wf#on_push_pull] is now configured to only run for the `main` branch and `v*` tags while [the `pull_request` field][gh-docs-actions-wf#on_pull] is set without any specific configuration so that it runs for all PRs regardless of the target branch.
+
+</details>
+
+<details>
+<summary><strong>Lowercase naming for GitHub Action workflows</strong> — #36 ⇄ #37 (⊶ e53fbaf8)</summary>
+
+↠ Even though it is possible to use uppercase names (including whitespaces) for GitHub Action workflows it is best practice for almost every language to use lowercase names. This prevents problems with parsing as well as errors due to lower- and uppercase mismatches.
+
+One example is the [shields.io][] SVG badge that is used in the README of this repository: The actual workflow is only found when the name matches the exact notation including lower- and uppercase characters
+To mitigate such problems the name has been changed to lowercase only.
+
+</details>
+
+<details>
+<summary><strong>Maximum line length for Markdown EditorConfig</strong> — #41 ⇄ #42 (⊶ 6c1a2ac9)</summary>
+
+↠ Since _Markdown_ is written as flowing text the globally defined maximum line length of EditorConfig has been disabled to prevent false-positive errors.
+
+</details>
+
+## Bug Fixes
+
+<details>
+<summary><strong>Fix missing LF EOL definition in Git attributes</strong> — #38 ⇄ #43 (⊶ 01d4aee3)</summary>
+
+↠ The comment for the `* text=auto` rule in the `.gitattributes` file documents the usage of LF for EOL, but the actual `eol=lf` property was missing.
+
+</details>
+
 # 0.1.0
 
 ![Release Date: 2020-08-26](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-08-26&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/4) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/1)
@@ -378,6 +431,8 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+[shields.io]: https://shields.io
+
 <!-- v0.1.0 -->
 
 [danger]: https://danger.systems
@@ -392,6 +447,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-blog-issue_pr_tmpl_intro]: https://github.blog/2016-02-17-issue-and-pull-request-templates
 [gh-blog-issue_pr_tmpl_multi]: https://github.blog/2018-01-25-multiple-issue-and-pull-request-templates
 [gh-comm_profile]: https://github.com/svengreb/tmpl/community
+[gh-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl/compare/0b0d7aee...v0.1.0
 [gh-docs-actions-events]: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events
 [gh-docs-actions]: https://docs.github.com/en/actions
 [gh-docs-coc]: https://docs.github.com/en/github/building-a-strong-community/adding-a-code-of-conduct-to-your-project
@@ -430,7 +486,6 @@ otherwise Markdown elements are not parsed and rendered!
 [quickhook]: https://github.com/dirk/quickhook
 [remark-lint]: https://github.com/remarkjs/remark-lint
 [remark]: https://remark.js.org
-[shields.io]: https://shields.io
 [styleguide-git]: https://github.com/arcticicestudio/styleguide-git
 [styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
 [styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
@@ -438,4 +493,14 @@ otherwise Markdown elements are not parsed and rendered!
 [yarn-docs-config]: https://yarnpkg.com/lang/en/docs/cli/config
 [yarn-docs-lock]: https://yarnpkg.com/lang/en/docs/yarn-lock
 [yarn-docs-rc]: https://yarnpkg.com/lang/en/docs/yarnrc
-[gh-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl/compare/0b0d7aee...v0.1.0
+
+<!-- v0.2.0 -->
+
+[gh-compare-tag-v0.1.0_v0.2.0]: https://github.com/svengreb/tmpl/compare/v0.1.0...v0.2.0
+[gh-docs-actions-wf#on_pull]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
+[gh-docs-actions-wf#on_push_pull]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
+[goland]: https://www.jetbrains.com/go
+[intellij]: https://www.jetbrains.com
+[jetbrains-plugins]: https://plugins.jetbrains.com
+[jetbrains]: https://www.jetbrains.com
+[yarn]: https://yarnpkg.com
