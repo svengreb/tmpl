@@ -6,6 +6,21 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.3.0
+
+![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/6) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/3)
+
+⇅ [Show all commits][gh-compare-tag-v0.2.0_v0.3.0]
+
+## Improvements
+
+<details>
+<summary><strong>Pin version to v2 for actions/checkout in CI workflow</strong> — #44 ⇄ #45 (⊶ 5d2ce0c0)</summary>
+
+↠ Before [`actions/checkout` was used from the `master` branch][repo-blob-ci.yml-e53fbaf8#l31] in the [`ci` workflow][repo-actions-query-ci]. This has now ben pinned to the latest version `v2` to ensure a stable pipeline.
+
+</details>
+
 # 0.2.0
 
 ![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/5) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/2)
@@ -504,3 +519,9 @@ otherwise Markdown elements are not parsed and rendered!
 [jetbrains-plugins]: https://plugins.jetbrains.com
 [jetbrains]: https://www.jetbrains.com
 [yarn]: https://yarnpkg.com
+
+<!-- v0.3.0 -->
+
+[gh-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl/compare/v0.2.0...v0.3.0
+[repo-actions-query-ci]: https://github.com/svengreb/tmpl/actions?query=workflow%3Aci
+[repo-blob-ci.yml-e53fbaf8#l31]: https://github.com/svengreb/tmpl/blob/e53fbaf8ff974a7c61d1ff51602175c82a35b20e/.github/workflows/ci.yml#L31
