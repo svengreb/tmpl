@@ -6,6 +6,23 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.4.0
+
+![Release Date: 2020-09-25](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-25&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/7) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/4)
+
+⇅ [Show all commits][gh-compare-tag-v0.3.0_v0.4.0]
+
+## Improvements
+
+<details>
+<summary><strong>Optimize OS version matrix strategy for CI workflow</strong> — #46 ⇄ #47 (⊶ cb772586)</summary>
+
+↠ Before the CI workflow used a matrix strategy to run the `lint-node` job, but this was not necessary for this repository. It has been improved to make the workflow run faster by avoiding unnecessary steps. The `lint-node` job has been changed to only run on the [currently latest stable Node version `14.x`][gh-nodejs/node-blob-cl-v14] only on _Linux_ because this repository is not focused on JavaScript but only runs Node based tools to lint other files within this repository.
+
+This change also helps to keep the required GitHub Action run minutes for the account of this repository as small as possible without wasting resources for unnecessary tasks.
+
+</details>
+
 # 0.3.0
 
 ![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/6) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/3)
@@ -525,3 +542,8 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl/compare/v0.2.0...v0.3.0
 [repo-actions-query-ci]: https://github.com/svengreb/tmpl/actions?query=workflow%3Aci
 [repo-blob-ci.yml-e53fbaf8#l31]: https://github.com/svengreb/tmpl/blob/e53fbaf8ff974a7c61d1ff51602175c82a35b20e/.github/workflows/ci.yml#L31
+
+<!-- v0.4.0 -->
+
+[gh-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl/compare/v0.3.0...v0.4.0
+[gh-nodejs/node-blob-cl-v14]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md
