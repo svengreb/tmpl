@@ -6,6 +6,21 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.5.0
+
+![Release Date: 2020-10-31](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-10-31&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/8) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/5)
+
+⇅ [Show all commits][gh-compare-tag-v0.4.0_v0.5.0]
+
+## Improvements
+
+<details>
+<summary><strong>Use namespace for NPM package name</strong> — #48 ⇄ #49 (⊶ 85f0b08c)</summary>
+
+↠ To prevent collisions with already existing NPM packages like [tmpl][npm-tmpl] the NPM package name of this repository has been changed to use the `@svengreb` namespace prefix.
+
+</details>
+
 # 0.4.0
 
 ![Release Date: 2020-09-25](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-25&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/7) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/4)
@@ -547,3 +562,8 @@ otherwise Markdown elements are not parsed and rendered!
 
 [gh-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl/compare/v0.3.0...v0.4.0
 [gh-nodejs/node-blob-cl-v14]: https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V14.md
+
+<!-- v0.5.0 -->
+
+[gh-compare-tag-v0.4.0_v0.5.0]: https://github.com/svengreb/tmpl/compare/v0.4.0...v0.5.0
+[npm-tmpl]: https://www.npmjs.com/package/tmpl
