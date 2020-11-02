@@ -1,7 +1,7 @@
 {
   "name": "@svengreb/tmpl",
   "version": "0.5.0",
-  "description": "A collection of repository templates for new projects",
+  "description": "A collection of template repositories for new projects",
   "author": {
     "name": "Sven Greb",
     "email": "development@svengreb.de",
