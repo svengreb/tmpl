@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://github.com/svengreb/tmpl/releases/latest"><img src="https://img.shields.io/github/release/svengreb/tmpl.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center">Changelog for the collection of <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository" target="_blank">repository templates</a> for new projects.</p>
+<p align="center">Changelog for the collection of <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository" target="_blank">template repositories</a> for new projects.</p>
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
@@ -292,7 +292,7 @@ To allow to run the Markdown linting separately a `lint:md` package script has b
 ↠ [Git Hooks][git-docs-hooks] are a fantastic way to customize the development workflow of a project to simplify and automate specific tasks that are required when working on the code base. For example, this includes tasks like formatting, _linting_ and running tests before pushing a commit to ensure it conforms to the code style and works as expected.
 Most _Git Hooks_ are not that complex and fullfil a simple purpose while other solutions like [Danger][] can help to manage larger projects and projects that need to scale.
 
-This _base_ repository template will initially use a _Git Hook_ that automatically runs configured _linters_ on all files that have been _staged_ and that match the configured pattern (file extension, filename etc.).
+This _base_ template repository will initially use a _Git Hook_ that automatically runs configured _linters_ on all files that have been _staged_ and that match the configured pattern (file extension, filename etc.).
 Like documented in #15, [NodeJS][] is already a development dependency anyway so the [lint-staged][] NPM package will be used for this goal. I‘ve used this package in almost any project and it‘s again the most stable, production-proven and advanced tool that is currently out there with no comparable alternatives in other languages.
 
 <p align="center"><a href="https://asciinema.org/a/199934"><img src="https://asciinema.org/a/199934.svg" width="600" /></a></p>
