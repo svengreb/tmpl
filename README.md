@@ -9,9 +9,10 @@
 <p align="center">A collection of <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository" target="_blank">template repositories</a> for new projects.</p>
 
 Starting a new project repository means to spend a lot of time first for setting up the basic structure and configuration for the used technology stack over and over again. It is a repetitive task since the same tools are often used across many projects, like linters and code formatters, and therefore often just copied over. This has the disadvantage that the configuration or documentation may differ between different projects or common changes and configurations are not synchronize at all. Many tools provide a way to created so called “shared configurations“ that can be used as base and dynamically composed with project-specific configurations, however, this does not apply to all.
-To prevent such problems a central place, so called template repository, for basic configurations and documentations as well as focus on different use cases, project structures and programming languages is a good solution to act as a single-source-of-truth™️.
+To prevent such problems a central place, so called “template repository“, for basic configurations and documentations as well as focus on different use cases, project structures and programming languages is a good solution to act as a single-source-of-truth™️.
 
-_tmpl_, the imaginative abbreviation for “template“, is my solution to enable and smooth project start and ensure that a project stays healthy, stable and up-to-date over time. It is separated into context, layout and/or language specific templates where each lives in its own repository. This Please note that _tmpl_ has mainly been created for my personal use in mind. The default configurations of these templates might not fit your needs, but they were designed to be flexible and can be adapted to different use cases and environments.
+_tmpl_, the imaginative abbreviation for “template“, is my solution to enable a smooth project start and ensure that a project stays healthy, stable and up-to-date over time. It is separated into context, layout and/or language specific templates where each lives in its own repository.
+Please note that _tmpl_ has mainly been created for my personal use in mind. The default configurations of these templates might not fit your needs, but they were designed to be flexible and can be adapted to different use cases and environments.
 
 ## Overview
 
@@ -25,7 +26,7 @@ This repository serves as the base template repository of _tmpl_ that provides e
 - Configurations for [Yarn and NPM](#nodejs-yarn-and-npm)
 - Basic configurations for [Git](#git)
 - A [MIT license](#license)
-- [EditorConfig](#eitorconfig) integration
+- [EditorConfig](#editorconfig) integration
 - [Prettier][] for [“auto-magical“ code& text formatting](#automatic-code-and-text-formatter)
 - [remark-lint][] to [lint Markdown](#markdown-linting)
 - [lint-staged][] for [Automatic pre-commit linting](#automatic-pre-commit-linting)
@@ -54,7 +55,7 @@ The current directory structure consists of basic directories mainly targeted fo
 
 - `.github` — The base directory for configurations and documentations of [GitHub features][gh-features] like [action][gh-docs-act] workflows and [issue/pull request templates][gh-docs-comm-issue_pr_tmpl].
   - `.github/ISSUE_TEMPLATE` — The directory for [individual issue template files][gh-docs-comm-issue_tmpl].
-  - `.github/workflows` — The directory for [action workflow files][gh-docs-act-learn#wf_file_syntax].
+  - `.github/workflows` — The directory for [action workflow files][gh-docs-act-ref-syntax].
 - `.assets` — A common base directory for (binary) projects assets like media or tool specific files that is independent of the repository hosting platform.
   - `.assets/images` — The sub-directory for project and/or repository specific images like [SVG][wikip-svg] or [raster graphics][wikip-raster_graphics].
 
@@ -62,13 +63,11 @@ The current directory structure consists of basic directories mainly targeted fo
 
 This repository serves as the base template repository of _tmpl_ that provides essential features for every project.
 
-- [GitHub specific features][gh-features]
-
-The sections below contain more detailed information about each feature, the sane default configurations and their files in the repository as well as ways to customize and adjust them to adapt to other use cases and projects. They provide information about files in this repository as well as the overall directory structure.
+The sections below contain more detailed information about each feature, the sane default configurations and their files in the repository as well as ways to customize and adjust them to adapt to other use cases and projects. They provide details about files in this repository and the overall directory structure.
 
 ### GitHub
 
-This template repository has partially been designed for repositories hosted on GitHub and makes use of many of the fantastic features.
+This template repository has partially been designed for repositories hosted on GitHub and makes use of many of [its fantastic features][gh-features].
 
 #### Code Owners
 
@@ -85,7 +84,7 @@ The [`.github/PULL_REQUEST_TEMPLATE.md`][gh-docs-comm-pr_tmpl] file is automatic
 
 #### CI/CD Action Workflow
 
-The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-learn#wf_file_syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in the this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
+The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
 
 ### Node.js: Yarn and NPM
 
@@ -223,7 +222,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-blob-mailmap]: https://github.com/svengreb/tmpl/blob/main/.mailmap
 [gh-blob-pkg.json]: https://github.com/svengreb/tmpl/blob/main/package.json
 [gh-blob-readme]: https://github.com/svengreb/tmpl/blob/main/README.md
-[gh-docs-act-learn#wf_file_syntax]: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions#understanding-the-workflow-file
+[gh-docs-act-ref-syntax]: https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
 [gh-docs-act]: https://docs.github.com/en/free-pro-team@latest/actions
 [gh-docs-autom_issue_pr_query]: https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-automation-for-issues-and-pull-requests-with-query-parameters
 [gh-docs-code_owners]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
