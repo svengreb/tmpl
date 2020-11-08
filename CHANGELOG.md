@@ -6,6 +6,38 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.6.0
+
+![Release Date: 2020-11-08](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/9) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/6)
+
+⇅ [Show all commits][gh-compare-tag-v0.5.0_v0.6.0]
+
+## Feature
+
+<details>
+<summary><strong>Initial project documentation</strong> — #50 ⇄ #51 (⊶ f18bf434)</summary>
+
+↠ Wrote the initial project documentation for the `README.md` file that includes…
+
+1. …an project introduction and motivation.
+2. …an overview of the project features.
+3. …a listing of available template repositories.
+4. …a rough overview of the directory structure.
+5. …more detailed sections about all features.
+6. …some basic instructions how to use this template repository.
+7. …information about how to contribute to this project.
+
+</details>
+
+<details>
+<summary><strong>Dependabot: Automated dependency updates and security alerts</strong> — #52 ⇄ #53 (⊶ 4816e4ec)</summary>
+
+↠ In June 2020 [Dependabot][] was [natively integrated into GitHub][gh-blog-dependabot]. This allows to use [automated dependency updates][gh-docs-dependabot] and [security vulnerability alerts][gh-docs-sec_vuls-alerts].
+
+Created the [`dependabot.yml` file][gh-docs-sec_vuls-dependabot_config] and configured updates for GitHub Actions and Yarn/NPM. The documentation also mentions the need to [manually enable or disable Dependabot per repository][gh-docs-dependabot_activation].
+
+</details>
+
 # 0.5.0
 
 ![Release Date: 2020-10-31](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-10-31&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/8) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/5)
@@ -567,3 +599,13 @@ otherwise Markdown elements are not parsed and rendered!
 
 [gh-compare-tag-v0.4.0_v0.5.0]: https://github.com/svengreb/tmpl/compare/v0.4.0...v0.5.0
 [npm-tmpl]: https://www.npmjs.com/package/tmpl
+
+<!-- v0.6.0 -->
+
+[dependabot]: https://dependabot.com
+[gh-blog-dependabot]: https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot
+[gh-compare-tag-v0.5.0_v0.6.0]: https://github.com/svengreb/tmpl/compare/v0.5.0...v0.6.0
+[gh-docs-dependabot_activation]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-and-disabling-version-updates
+[gh-docs-dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
+[gh-docs-sec_vuls-alerts]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-alerts-for-vulnerable-dependencies
+[gh-docs-sec_vuls-dependabot_config]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilitiesconfiguring-dependabot-security-updates
