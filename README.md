@@ -23,6 +23,7 @@ This repository serves as the base template repository of _tmpl_ that provides e
   - …individual [issue templates](#issue-templates)
   - …a extensive [pull request template](#pull-request-template)
   - …a basic [CI/CD action workflow](#cicd-action-workflow)
+  - …[automated updates and security vulnerability alerts](#automated-dependency-updates) for dependencies through the native [Dependabot][] integration
 - Configurations for [Yarn and NPM](#nodejs-yarn-and-npm)
 - Basic configurations for [Git](#git)
 - A [MIT license](#license)
@@ -85,6 +86,13 @@ The [`.github/PULL_REQUEST_TEMPLATE.md`][gh-docs-comm-pr_tmpl] file is automatic
 #### CI/CD Action Workflow
 
 The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
+
+#### Automated Dependency Updates
+
+To ensure dependencies of various package ecosystems are up-to-date, [Dependabot][] has been [natively integrated into GitHub][gh-blog-dependabot]. It creates [automated updates][gh-docs-dependabot] and [security vulnerability alerts][gh-docs-sec_vuls-alerts] for dependencies.
+The basic [`dependabot.yml` file][gh-blob-dot_github-dependabot.yml] in this template repository contains [the configuration][gh-docs-dependabot] for [GitHub Action workflows](#cicd-action-workflow) and [Node.js dependencies](#nodejs-yarn-and-npm).
+
+Note that you must manually enable or disable [version][gh-docs-dependabot_activation] and [security][gh-docs-sec_vuls-dependabot_config] Dependabot updates per repository!
 
 ### Node.js: Yarn and NPM
 
@@ -182,7 +190,8 @@ There are multiple ways to use this template repository, either by [creating a r
 2. Adjust [files related to GitHub features](#github) like the [CI/CD action workflow](#cicd-action-workflow), [issue](#issue-templates) & [pull request](#pull-request-template) templates, [code owners](#code-owners) and any other file located in the [`github` directory][gh-tree-dot_github] to match your project.
 3. Adjust documentations like the [README][gh-blob-readme], [changelog][gh-blob-changelog], [code of conduct][gh-blob-coc] and [contribution guides][gh-blob-contrib] to match your project.
 4. Adjust the [`package.json`][gh-blob-pkg.json] file to match your project metadata.
-5. Adjust all copyright notices to match your project.
+5. Adjust the [`dependabot.yml`][gh-blob-dot_github-dependabot.yml] file to match your project metadata.
+6. Adjust all copyright notices to match your project.
 
 ## Contributing
 
@@ -211,6 +220,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [contrib-guide-versioning]: https://github.com/svengreb/tmpl/blob/main/CONTRIBUTING.md#versioning
 [contrib-guide]: https://github.com/svengreb/tmpl/blob/main/CONTRIBUTING.md
 [danger]: https://danger.systems
+[dependabot]: https://dependabot.com
 [editorconfig]: https://editorconfig.org
 [gh-arcticicestudio-repos-q-stg]: https://github.com/arcticicestudio?tab=repositories&q=styleguide
 [gh-arcticicestudio/remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
@@ -218,10 +228,12 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-blob-coc]: https://github.com/svengreb/tmpl/blob/main/CODE_OF_CONDUCT.md
 [gh-blob-codeowners]: https://github.com/svengreb/tmpl/blob/main/.github/CODEOWNERS
 [gh-blob-contrib]: https://github.com/svengreb/tmpl/blob/main/CONTRIBUTING.md
+[gh-blob-dot_github-dependabot.yml]: https://github.com/svengreb/tmpl-go/blob/main/.github/dependabot.yml
 [gh-blob-license]: https://github.com/svengreb/tmpl/blob/main/LICENSE
 [gh-blob-mailmap]: https://github.com/svengreb/tmpl/blob/main/.mailmap
 [gh-blob-pkg.json]: https://github.com/svengreb/tmpl/blob/main/package.json
 [gh-blob-readme]: https://github.com/svengreb/tmpl/blob/main/README.md
+[gh-blog-dependabot]: https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot
 [gh-docs-act-ref-syntax]: https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
 [gh-docs-act]: https://docs.github.com/en/free-pro-team@latest/actions
 [gh-docs-autom_issue_pr_query]: https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-automation-for-issues-and-pull-requests-with-query-parameters
@@ -230,9 +242,13 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-docs-comm-issue_tmpl-chooser]: https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
 [gh-docs-comm-issue_tmpl]: https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/configuring-issue-templates-for-your-repository
 [gh-docs-comm-pr_tmpl]: https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository
+[gh-docs-dependabot_activation]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-and-disabling-version-updates
+[gh-docs-dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
 [gh-docs-issue_tmpl_legacy]: https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/manually-creating-a-single-issue-template-for-your-repository
 [gh-docs-repo_clone]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 [gh-docs-repo_from_tmpl]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template
+[gh-docs-sec_vuls-alerts]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-alerts-for-vulnerable-dependencies
+[gh-docs-sec_vuls-dependabot_config]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilitiesconfiguring-dependabot-security-updates
 [gh-feat-actions]: https://github.com/features/actions
 [gh-features]: https://github.com/features
 [gh-tree-dot_github]: https://github.com/svengreb/tmpl/tree/main/.github
