@@ -184,13 +184,13 @@ The `.huskyrc.js` configuration file is placed in the project root and includes 
 
 ## Usage
 
-There are multiple ways to use this template repository, either by [creating a repository from a template repository][gh-docs-repo_from_tmpl] or simply [cloning this template repository][gh-docs-repo_clone]. No matter which method is used, there are a few manual steps to adjust some configurations and documentations for the individual target project. Note that these changes are only recommendations, but are common steps anyway.
+There are multiple ways to use this template repository, either by [using GitHubs feature to create a repository from a template][gh-docs-repo_from_tmpl] or simply [cloning it][gh-docs-repo_clone]. No matter which method is used, there are a few manual steps to adjust some configurations and documentations for the individual target project. Note that these changes are only recommendations, but are common steps anyway.
 
 1. Adjust the [`.github/CODEOWNERS`][gh-blob-codeowners] and [`.mailmap`][gh-blob-mailmap] files to use mappings for your project contributors and team members.
 2. Adjust [files related to GitHub features](#github) like the [CI/CD action workflow](#cicd-action-workflow), [issue](#issue-templates) & [pull request](#pull-request-template) templates, [code owners](#code-owners) and any other file located in the [`github` directory][gh-tree-dot_github] to match your project.
 3. Adjust documentations like the [README][gh-blob-readme], [changelog][gh-blob-changelog], [code of conduct][gh-blob-coc] and [contribution guides][gh-blob-contrib] to match your project.
-4. Adjust the [`package.json`][gh-blob-pkg.json] file to match your project metadata.
-5. Adjust the [`dependabot.yml`][gh-blob-dot_github-dependabot.yml] file to match your project metadata.
+4. Adjust the [`package.json`][gh-blob-pkg.json] file to match your project.
+5. Adjust the [`dependabot.yml`][gh-blob-dot_github-dependabot.yml] file to match your project.
 6. Adjust all copyright notices to match your project.
 
 ## Contributing

@@ -6,6 +6,26 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.7.0
+
+![Release Date: 2020-11-09](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/10) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/7)
+
+⇅ [Show all commits][gh-compare-tag-v0.6.0_v0.7.0]
+
+## Tasks
+
+<details>
+<summary><strong>Updated to latest Node.js package dependency & GitHub Action versions</strong> — #54,#55,#56,#57</summary>
+
+↠ Bumped outdated Node.js package dependencies & GitHub Actions to their latest versions:
+
+- #54 (⊶ 41e11b94) [`actions/setup-node`][gh-actions/setup-node] from [v1 to v2.1.2][gh-actions/setup-node-comp-v1_v2.1.2] — v2 comes with speed and performance improvements by using a dedicated, built-in image cache for Node.js distributions.
+- #55 (⊶ d1e3d538) [`lint-staged`][gh-lint-staged] from [10.2.11 to 10.5.12][gh-lint-staged-comp-v10.2.11_v10.5.1]
+- #56 (⊶ 22652c51) [`husky`][gh-husky] from [4.2.5 to 4.3.0][gh-husky-comp-v4.2.5_v4.3.0]
+- #57 (⊶ 17378a12) [`prettier`][prettier] from [2.0.5 to 2.1.2][gh-prettier-comp-2.0.5_2.1.2]
+
+</details>
+
 # 0.6.0
 
 ![Release Date: 2020-11-08](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-08&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/9) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/6)
@@ -510,6 +530,7 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+[prettier]: https://prettier.io
 [shields.io]: https://shields.io
 
 <!-- v0.1.0 -->
@@ -561,7 +582,6 @@ otherwise Markdown elements are not parsed and rendered!
 [oss-guides-coc]: https://opensource.guide/code-of-conduct
 [oss-guides-contrib]: https://opensource.guide/how-to-contribute
 [prettier-docs-pwidth]: https://prettier.io/docs/en/options.html#print-width
-[prettier]: https://prettier.io
 [quickhook]: https://github.com/dirk/quickhook
 [remark-lint]: https://github.com/remarkjs/remark-lint
 [remark]: https://remark.js.org
@@ -609,3 +629,14 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-docs-dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
 [gh-docs-sec_vuls-alerts]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-alerts-for-vulnerable-dependencies
 [gh-docs-sec_vuls-dependabot_config]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilitiesconfiguring-dependabot-security-updates
+
+<!-- v0.7.0 -->
+
+[gh-actions/setup-node-comp-v1_v2.1.2]: https://github.com/actions/setup-node/compare/v1...v2.1.2
+[gh-actions/setup-node]: https://github.com/actions/setup-node
+[gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/svengreb/tmpl/compare/v0.6.0...v0.7.0
+[gh-husky-comp-v4.2.5_v4.3.0]: https://github.com/typicode/husky/compare/v4.2.5...v4.3.0
+[gh-husky]: https://github.com/typicode/husky
+[gh-lint-staged-comp-v10.2.11_v10.5.1]: https://github.com/okonet/lint-staged/compare/v10.2.11...v10.5.1
+[gh-lint-staged]: https://github.com/okonet/lint-staged
+[gh-prettier-comp-2.0.5_2.1.2]: https://github.com/prettier/prettier/compare/2.0.5...2.1.2
