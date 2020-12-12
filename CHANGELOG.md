@@ -6,6 +6,47 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.8.0
+
+![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/8)
+
+⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+
+## Improvements
+
+<details>
+<summary><strong>Reduce Dependabot PR noise for NPM package ecosystem</strong> — #65 ⇄ #66 (⊶ 32925a1f)</summary>
+
+↠ To reduce the noise of too many PRs from NPM dependencies, where most of them are only scoped for (local) development, two optimizations have been made:
+
+1. The schedule changed to the [`monthly` interval][gh-docs-dep_updates#schedule_interval]. This is still enough to keep up with the fast updates in the NPM ecosystem.
+2. Only watch **production** packages (`dependencies`) and **ignore development packages** (`devDependencies`). The packages used for local or CI/CD development purposes are not required to be the latest version just for the sake of being up-to-date without a specific need or benefit.
+
+Since [GitHub takes security really serious][gh-feat-sec], important Dependabot [security updates][gh-docs-dep_sec_updates] are triggered manually by a security advisor so there is no risk of missing important versions bumps when reducing the schedule interval.
+
+> Use the `allow` option to customize which dependencies are updated. This has no impact on security updates for vulnerable dependencies.
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Prepared project/repository publication</strong> — #59 ⇄ #60 (⊶ 50238339)</summary>
+
+↠ Before switching the [GitHub repository visibility][gh-docs-repo_vis] to “public“ a few adjustments had to be made.
+Basically #22 was reverted, taking the changes from #23 into account, so that SVG images like the repository hero are using the URLs for public repositories again instead of the ones that allow to resolve the files in private repositories.
+
+</details>
+
+<details>
+<summary><strong>Node.js package dependency version updates</strong> — #63</summary>
+
+↠ Bumped outdated Node.js package dependencies to their latest versions:
+
+- #63 (⊶ 35287545) [`prettier`][gh-prettier/prettier] from [2.1.2 to 2.2.1][gh-prettier/prettier-comp-v2.1.2_v2.2.1] — The the [official Prettier 2.2 introduction blog post][prettier-blog-rl_2.2] for more details.
+
+</details>
+
 # 0.7.0
 
 ![Release Date: 2020-11-09](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/10) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/7)
@@ -640,3 +681,14 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-lint-staged-comp-v10.2.11_v10.5.1]: https://github.com/okonet/lint-staged/compare/v10.2.11...v10.5.1
 [gh-lint-staged]: https://github.com/okonet/lint-staged
 [gh-prettier-comp-2.0.5_2.1.2]: https://github.com/prettier/prettier/compare/2.0.5...2.1.2
+
+<!-- v0.8.0 -->
+
+[gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/svengreb/tmpl/compare/v0.7.0...v0.8.0
+[gh-docs-dep_sec_updates]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilities/about-dependabot-security-updates
+[gh-docs-dep_updates#schedule_interval]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates#scheduleinterval
+[gh-docs-repo_vis]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/setting-repository-visibility
+[gh-feat-sec]: https://github.com/security
+[gh-prettier/prettier-comp-v2.1.2_v2.2.1]: https://github.com/prettier/prettier/compare/2.1.2...2.2.1
+[gh-prettier/prettier]: https://github.com/prettier/prettier
+[prettier-blog-rl_2.2]: https://prettier.io/blog/2020/11/20/2.2.0.html
