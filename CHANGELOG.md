@@ -13,28 +13,6 @@
 ## Improvements
 
 <details>
-<summary><strong>Reduce Dependabot PR noise for NPM package ecosystem</strong> — #65 ⇄ #66 (⊶ 32925a1f)</summary>
-
-↠ To reduce the noise of too many PRs from NPM dependencies, where most of them are only scoped for (local) development, two optimizations have been made:
-
-1. The schedule changed to the [`monthly` interval][gh-docs-dep_updates#schedule_interval]. This is still enough to keep up with the fast updates in the NPM ecosystem.
-2. Only watch **production** packages (`dependencies`) and **ignore development packages** (`devDependencies`). The packages used for local or CI/CD development purposes are not required to be the latest version just for the sake of being up-to-date without a specific need or benefit.
-
-Since [GitHub takes security really serious][gh-feat-sec], important Dependabot [security updates][gh-docs-dep_sec_updates] are triggered manually by a security advisor so there is no risk of missing important versions bumps when reducing the schedule interval.
-
-> Use the `allow` option to customize which dependencies are updated. This has no impact on security updates for vulnerable dependencies.
-
-</details>
-
-# 0.8.0
-
-![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/8)
-
-⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
-
-## Improvements
-
-<details>
 <summary><strong>From npm to Yarn and back again</strong> — #72 ⇄ #73 (⊶ b9967864)</summary>
 
 ↠ Some years ago, the switch from [npm][] (`v4`) to [Yarn][yarn-v1] (`v1`) was mainly done because of the fantastic [workspace feature][yarn-docs-ws] for [monorepos][wiki-monorepo] as well as the great performance and UX improvements. This was a good decision and almost every popular and well-known project used to do the same, but with the announcement of [Yarn v2][yarn] (named [“berry“][gh-yarnpkg/berry]) the community got upset about the path the project has taken. Next to this, [npm joined GitHub][gh-blog-npm_joins] back in March 2020 which meant that the development continues in a good direction and is baked by the open source platform itself.
@@ -104,6 +82,28 @@ The community is still not of one opinion and I guess this will never change, bu
 In conclusion, the usage of lockfiles in a non-end-user project can be well summarized with [“just postponing the inevitable breakage“][tw-renovatebot-1163789817492230144]:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/13448100/113289644-c3388680-92f0-11eb-9a0b-d710c78edb92.png" width="350" /></p>
+
+</details>
+
+# 0.8.0
+
+![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/8)
+
+⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+
+## Improvements
+
+<details>
+<summary><strong>Reduce Dependabot PR noise for NPM package ecosystem</strong> — #65 ⇄ #66 (⊶ 32925a1f)</summary>
+
+↠ To reduce the noise of too many PRs from NPM dependencies, where most of them are only scoped for (local) development, two optimizations have been made:
+
+1. The schedule changed to the [`monthly` interval][gh-docs-dep_updates#schedule_interval]. This is still enough to keep up with the fast updates in the NPM ecosystem.
+2. Only watch **production** packages (`dependencies`) and **ignore development packages** (`devDependencies`). The packages used for local or CI/CD development purposes are not required to be the latest version just for the sake of being up-to-date without a specific need or benefit.
+
+Since [GitHub takes security really serious][gh-feat-sec], important Dependabot [security updates][gh-docs-dep_sec_updates] are triggered manually by a security advisor so there is no risk of missing important versions bumps when reducing the schedule interval.
+
+> Use the `allow` option to customize which dependencies are updated. This has no impact on security updates for vulnerable dependencies.
 
 </details>
 
