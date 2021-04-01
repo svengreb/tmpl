@@ -2,11 +2,7 @@
   "name": "@svengreb/tmpl",
   "version": "0.8.0",
   "description": "A collection of template repositories for new projects",
-  "author": {
-    "name": "Sven Greb",
-    "email": "development@svengreb.de",
-    "url": "https://www.svengreb.de"
-  },
+  "author": "Sven Greb <development@svengreb.de> (https://www.svengreb.de)",
   "homepage": "https://github.com/svengreb/tmpl",
   "repository": {
     "type": "git",
@@ -14,6 +10,10 @@
   },
   "bugs": {
     "url": "https://github.com/svengreb/tmpl/issues"
+  },
+  "engines": {
+    "node": "^15.13.0",
+    "npm": "^7.7.0"
   },
   "private": true,
   "license": "MIT",

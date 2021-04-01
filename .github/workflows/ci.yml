@@ -26,8 +26,8 @@ jobs:
       - name: "Setup Node.js version 14.x"
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: "14.x"
+          node-version: "15.13.x"
       - name: Install Node modules
-        run: yarn --frozen-lockfile
+        run: npm install
       - name: Run linters
-        run: yarn lint
+        run: npm run lint
