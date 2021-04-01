@@ -1,16 +1,14 @@
 <p align="center"><img src="https://raw.githubusercontent.com/svengreb/tmpl/main/assets/images/repository-hero.svg?sanitize=true"/></p>
 
-<p align="center"><a href="https://github.com/svengreb/tmpl/releases/latest"><img src="https://img.shields.io/github/release/svengreb/tmpl.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
-
 <p align="center">Changelog for the collection of <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository" target="_blank">template repositories</a> for new projects.</p>
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
-# 0.8.0
+# 0.9.0
 
-![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/8)
+![Release Date: 2021-04-01](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-04-01&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/12) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/9)
 
-⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+⇅ [Show all commits][gh-compare-tag-v0.8.0_v0.9.0]
 
 ## Improvements
 
@@ -25,6 +23,87 @@
 Since [GitHub takes security really serious][gh-feat-sec], important Dependabot [security updates][gh-docs-dep_sec_updates] are triggered manually by a security advisor so there is no risk of missing important versions bumps when reducing the schedule interval.
 
 > Use the `allow` option to customize which dependencies are updated. This has no impact on security updates for vulnerable dependencies.
+
+</details>
+
+# 0.8.0
+
+![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/8)
+
+⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+
+## Improvements
+
+<details>
+<summary><strong>From npm to Yarn and back again</strong> — #72 ⇄ #73 (⊶ b9967864)</summary>
+
+↠ Some years ago, the switch from [npm][] (`v4`) to [Yarn][yarn-v1] (`v1`) was mainly done because of the fantastic [workspace feature][yarn-docs-ws] for [monorepos][wiki-monorepo] as well as the great performance and UX improvements. This was a good decision and almost every popular and well-known project used to do the same, but with the announcement of [Yarn v2][yarn] (named [“berry“][gh-yarnpkg/berry]) the community got upset about the path the project has taken. Next to this, [npm joined GitHub][gh-blog-npm_joins] back in March 2020 which meant that the development continues in a good direction and is baked by the open source platform itself.
+These events, the overall fantastic new npm release version `v7`, including the introduction of [workspaces][npm-docs-ws], and the fact that I never liked the disadvantage of requiring to use an “external“ package manager instead of the one that is bundled with Node, lead to the decision to finally switch back to npm again.
+
+The only drawback is the constraint that the minimum [npm version is now `v7.7.0`][gh-npm/cli-rel-v7.7.0] because this is the first version that comes with workspace support for the `run-script` and `exec` commands through the `--workspace`/`-w` and `--workspaces`/`-ws` CLI flags, e.g. `npm run -w PACKAGE run lint`. The first Node version that ships with npm `v7.7.x` is [`v15.13.0`][node-dist-v15.13.0] which is globally available as of april 1, 2021 (no, it‘s not an april fool :smile:). To ensure that these constraints are met, without only relying on users to read the documentation, both `npm` and `node` have been added to [the `engines` field][npm-docs-pkgjson#engines] of the `package.json` file.
+
+This change also comes with updates to all documentations, including the addition of the version constraints, as well as updates to repository template features like the GitHub Action workflows. The `.yarnrc` file has been replaced by `.npmrc` that includes the `package-lock=false` and `save-exact=false` configurations.
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Node package dependency & GitHub action version updates</strong> — #67, #68, #69, #74 ⇄ #75</summary>
+
+↠ Bumped outdated Go module dependencies and GitHub actions to their latest versions:
+
+- #67, #68, #69 (⊶ 8bff7a5d, 46a92f0a, 14a9108e) [`actions/setup-node`][gh-actions/setup-node] from [v2.1.2 to v2.1.5][gh-actions/setup-node-comp-v2.1.2_v2.1.5]
+- #74 ⇄ #75 (⊶ d827dbf5) [husky][gh-typicode/husky] — Bumped minimum version from [`v4.3.0` to `v6.0.0`][gh-typicode/husky-comp-v4.3.0_v6.0.0]. This also includes some breaking changes that require migrations. Run the official migration CLI to automatically migrate from v4 to v6: `npx husky-init && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config`
+- #74 ⇄ #75 (⊶ d827dbf5) [lint-staged][gh-okonet/lint-staged] — Bumped minimum version from [`v10.5.1` to `v10.5.4`][gh-okonet/lint-staged-comp-v10.5.1_v10.5.4].
+- #74 ⇄ #75 (⊶ d827dbf5) [remark-cli][gh-remarkjs/remark] — Bumped minimum version from [`v8.0.1` to `v9.0.0`][gh-remarkjs/remark-comp-v8.0.1_v9.0.0].
+
+</details>
+
+<details>
+<summary><strong>Dependency handling with lockfiles</strong> — #70 ⇄ #71 (⊶ a98d9b1c)</summary>
+
+↠ The usage of dependency lockfiles like [`package-lock.json`][npm-docs-v7-lockfile] or [`yarn.lock`][yarn-docs-lock] has always been a controversial topic where opinions go in different directions. On one side many project maintainers tend to argue that is helps to achieve deterministic build results, but on the side it might also hide problems when any later versions of a used dependency, or its transitive dependencies, is not compatible with the own project anymore.
+
+I‘ve investigated a lot of time into research again to finally find a solution that works for my projects. In short, the result is to go with the rule that is also used by many large-scale projects: Do **not use lockfiles for multi-consumer projects like libraries** but **only for single-consumer projects like applications**.
+
+Therefore the `yarn.lock` file has been removed since this makes no sense for a repository template anyway. See the sections below for some more details about how to decide to use a lockfile or not.
+
+### When to use lockfiles
+
+The clear advantage of lockfiles are reproducible builds and the persistence of a running project state. They ensure that a project artifact can be rebuild at anytime using the exact same dependencies, resulting in the exact same artifact, even when the project was not updated in years.
+This applies to projects that are focused on building a **end-to-end experience like applications and other end-user products**.
+
+These are the advantages listed in the official npm documentation about `package-lock.json` files:
+
+> - Describe a single representation of a dependency tree such that teammates, deployments, and continuous integration are guaranteed to install exactly the same dependencies.
+> - Provide a facility for users to "time-travel" to previous states of node_modules without having to commit the directory itself.
+> - Facilitate greater visibility of tree changes through readable source control diffs.
+> - Optimize the installation process by allowing npm to skip repeated metadata resolutions for previously-installed packages.
+> - As of npm `v7`, lockfiles include enough information to gain a complete picture of the package tree, reducing the need to read package.json files, and allowing for significant performance improvements.
+
+Like mentioned, npm `v7` comes with a lot of advantages and the [team recommends to commit the file into project repositories][npm-blog-v7_keep_lock]:
+
+- the lockfile has enough information to describe the precise package tree all by itself.
+- the lockfile maps the packages to their information by their relative location to the root (instead of their name).
+- the npm CLI uses `yarn.lock` lockfiles if available, as a source of package metadata and resolution guidance when there is missing information, knowing that the `package-lock.json` is the authoritative definition.
+  - `yarn.lock` lockfiles cannot completely replace npm’s lockfile since the current implementation doesn’t have enough information needed for the complete npm functionality.
+- the npm CLI uses a “hidden lockfile“ placed inside the `node_module` directory that helps to avoid repeated package tree reading.
+
+Another point is that in end-user projects dependencies in `package.json` files are often pinned instead of using [SemVer range selectors][npm-webapp-semver] like `^` (latest minor-only) or `~` (latest patch only). In such cases a lockfile helps to keep control about transitive dependencies and persist projects states in time.
+
+### When to avoid lockfiles
+
+Even though [the Yarn team published a blog post in 2016][yarn-blog-lockfiles] that states to always commit the `yarn.lock` file, regardless of the project type, this advice was not adopted by every project and some “real-world scenarios“ often showed that this decision was justified. There are [blog posts that summarize when not to use a lockfile][devto-gajus-stop_lockfile] where even [Yarn maintainers reply with comments that claim the opposite][devto-gajus-stop_lockfile-comment-yarn_maintainer], but over the time more and more projects went away from using lockfiles.
+One argument is that [lockfiles are important to enure that library contributors in 10 years still know what was the last confirmed set of packages which worked as expected][tw-arcanis-1164229994165559299-comment-19], but this can almost be ignored in a ecosystem like Node that changes almost every day.
+
+Another important point is to mention that the usage of [lockfiles were also a attack surface to inject malicious dependencies][snyk-blog-lockfile]. Due to the large size of lockfiles, it is also often a challenge for project maintainers to review and validate a lockfile in pull requests are so they are often [ignored and blindly trusted][tw-bcrypt-1208950722097598465].
+
+The community is still not of one opinion and I guess this will never change, but [learning about the experience of well-known maintainers][gh-sindresorhus/ama-479#c-310661514] and [popular projects][gh-airbnb/javascript-2409] is often a good way to find the own decision.
+
+In conclusion, the usage of lockfiles in a non-end-user project can be well summarized with [“just postponing the inevitable breakage“][tw-renovatebot-1163789817492230144]:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/13448100/113289644-c3388680-92f0-11eb-9a0b-d710c78edb92.png" width="350" /></p>
 
 </details>
 
@@ -569,10 +648,13 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!--lint disable final-definition-->
 
-<!-- Base Links -->
+<!-- Shared -->
 
+[gh-actions/setup-node]: https://github.com/actions/setup-node
 [prettier]: https://prettier.io
 [shields.io]: https://shields.io
+[yarn-docs-lock]: https://yarnpkg.com/lang/en/docs/yarn-lock
+[yarn]: https://yarnpkg.com
 
 <!-- v0.1.0 -->
 
@@ -631,7 +713,6 @@ otherwise Markdown elements are not parsed and rendered!
 [styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
 [unifiedjs]: https://unifiedjs.com
 [yarn-docs-config]: https://yarnpkg.com/lang/en/docs/cli/config
-[yarn-docs-lock]: https://yarnpkg.com/lang/en/docs/yarn-lock
 [yarn-docs-rc]: https://yarnpkg.com/lang/en/docs/yarnrc
 
 <!-- v0.2.0 -->
@@ -643,7 +724,6 @@ otherwise Markdown elements are not parsed and rendered!
 [intellij]: https://www.jetbrains.com
 [jetbrains-plugins]: https://plugins.jetbrains.com
 [jetbrains]: https://www.jetbrains.com
-[yarn]: https://yarnpkg.com
 
 <!-- v0.3.0 -->
 
@@ -674,7 +754,6 @@ otherwise Markdown elements are not parsed and rendered!
 <!-- v0.7.0 -->
 
 [gh-actions/setup-node-comp-v1_v2.1.2]: https://github.com/actions/setup-node/compare/v1...v2.1.2
-[gh-actions/setup-node]: https://github.com/actions/setup-node
 [gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/svengreb/tmpl/compare/v0.6.0...v0.7.0
 [gh-husky-comp-v4.2.5_v4.3.0]: https://github.com/typicode/husky/compare/v4.2.5...v4.3.0
 [gh-husky]: https://github.com/typicode/husky
@@ -692,3 +771,36 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-prettier/prettier-comp-v2.1.2_v2.2.1]: https://github.com/prettier/prettier/compare/2.1.2...2.2.1
 [gh-prettier/prettier]: https://github.com/prettier/prettier
 [prettier-blog-rl_2.2]: https://prettier.io/blog/2020/11/20/2.2.0.html
+
+<!-- v0.9.0 -->
+
+[devto-gajus-stop_lockfile-comment-yarn_maintainer]: https://dev.to/arcanis/comment/fo33
+[devto-gajus-stop_lockfile]: https://dev.to/gajus/stop-using-package-lock-json-or-yarn-lock-3ddi
+[gh-actions/setup-node-comp-v2.1.2_v2.1.5]: https://github.com/actions/setup-node/compare/v2.1.2...v2.1.5
+[gh-airbnb/javascript-2409]: https://github.com/airbnb/javascript/issues/2409
+[gh-blog-npm_joins]: https://github.blog/2020-03-16-npm-is-joining-github
+[gh-compare-tag-v0.8.0_v0.9.0]: https://github.com/svengreb/tmpl/compare/v0.8.0...v0.9.0
+[gh-npm/cli-rel-v7.7.0]: https://github.com/npm/cli/releases/tag/v7.7.0
+[gh-okonet/lint-staged-comp-v10.5.1_v10.5.4]: https://github.com/typicode/husky/compare/v10.5.1...v10.5.4
+[gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
+[gh-remarkjs/remark-comp-v8.0.1_v9.0.0]: https://github.com/typicode/husky/compare/v8.0.1...v9.0.0
+[gh-remarkjs/remark]: https://github.com/remarkjs/remark/releases
+[gh-sindresorhus/ama-479#c-310661514]: https://github.com/sindresorhus/ama/issues/479#issuecomment-310661514
+[gh-typicode/husky-comp-v4.3.0_v6.0.0]: https://github.com/typicode/husky/compare/v4.3.0...v6.0.0
+[gh-typicode/husky]: https://github.com/typicode/husky
+[gh-yarnpkg/berry]: https://github.com/yarnpkg/berry
+[node-dist-v15.13.0]: https://nodejs.org/dist/v15.13.0
+[npm-blog-v7_keep_lock]: https://blog.npmjs.org/post/621733939456933888/npm-v7-series-why-keep-package-lockjson.html
+[npm-docs-pkgjson#engines]: https://docs.npmjs.com/cli/v7/configuring-npm/package-json#engines
+[npm-docs-v7-lockfile]: https://docs.npmjs.com/cli/v7/configuring-npm/package-lock-json
+[npm-docs-ws]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
+[npm-webapp-semver]: https://semver.npmjs.com
+[npm]: https://www.npmjs.com
+[snyk-blog-lockfile]: https://snyk.io/blog/why-npm-lockfiles-can-be-a-security-blindspot-for-injecting-malicious-modules
+[tw-arcanis-1164229994165559299-comment-19]: https://twitter.com/arcanis/status/1164229994165559299?s=19
+[tw-bcrypt-1208950722097598465]: https://twitter.com/bcrypt/status/1208950722097598465
+[tw-renovatebot-1163789817492230144]: https://twitter.com/renovatebot/status/1163789817492230144
+[wiki-monorepo]: https://en.wikipedia.org/wiki/Monorepo
+[yarn-blog-lockfiles]: https://classic.yarnpkg.com/blog/2016/11/24/lockfiles-for-all
+[yarn-docs-ws]: https://classic.yarnpkg.com/en/docs/workspaces
+[yarn-v1]: https://classic.yarnpkg.com
