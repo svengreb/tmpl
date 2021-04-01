@@ -55,7 +55,7 @@ The recommended way is to upload it as [Gist](https://gist.github.com) or new re
   - Have you tried to reproduce it on different OS environments and if yes is the behavior the same for all?
 - If the problem is related to the runtime of the project (e.g. [Node.js](https://nodejs.org) or [Go](https://golang.org)) please provide the version you're running.
   - Are you using any additional CLI arguments to run the project?
-- What is the version of the build tool (e.g. [Yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com)) you are running?
+- What is the version of the build tool (e.g. [npm](https://www.npmjs.com) or [Yarn](https://yarnpkg.com)) you are running?
   - Are you using any additional CLI arguments to start the build tool task/script other than defined by the project?
 
 If you've installed [Node.js](https://nodejs.org) on your system you can run [envinfo](https://www.npmjs.com/package/envinfo) via [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which will print environment information that help the the community to better reproduce the bug.

@@ -24,7 +24,7 @@ This repository serves as the base template repository of _tmpl_ that provides e
   - …a extensive [pull request template](#pull-request-template)
   - …a basic [CI/CD action workflow](#cicd-action-workflow)
   - …[automated updates and security vulnerability alerts](#automated-dependency-updates) for dependencies through the native [Dependabot][] integration
-- Configurations for [Yarn and NPM](#nodejs-yarn-and-npm)
+- Configurations for [npm and Yarn](#nodejs-npm-and-yarn)
 - Basic configurations for [Git](#git)
 - A [MIT license](#license)
 - [EditorConfig](#editorconfig) integration
@@ -90,22 +90,24 @@ The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a b
 #### Automated Dependency Updates
 
 To ensure dependencies of various package ecosystems are up-to-date, [Dependabot][] has been [natively integrated into GitHub][gh-blog-dependabot]. It creates [automated updates][gh-docs-dependabot] and [security vulnerability alerts][gh-docs-sec_vuls-alerts] for dependencies.
-The basic [`dependabot.yml` file][gh-blob-dot_github-dependabot.yml] in this template repository contains [the configuration][gh-docs-dependabot] for [GitHub Action workflows](#cicd-action-workflow) and [Node.js dependencies](#nodejs-yarn-and-npm).
+The basic [`dependabot.yml` file][gh-blob-dot_github-dependabot.yml] in this template repository contains [the configuration][gh-docs-dependabot] for [GitHub Action workflows](#cicd-action-workflow) and [Node.js dependencies](#nodejs-npm-and-yarn).
 
 Note that you must manually enable or disable [version][gh-docs-dependabot_activation] and [security][gh-docs-sec_vuls-dependabot_config] Dependabot updates per repository!
 
-### Node.js: Yarn and NPM
+### Node.js: npm and Yarn
 
 Since most of the tools included in this template repository like…
 
 - Prettier for [“auto-magical“ code & text formatting](#automatic-code-and-text-formatter)
 - remark-lint for [linting of Markdown source files](#markdown-linting)
 - lint-staged for [automatic pre-commit linting](#automatic-pre-commit-linting)
-- husky as [Git Hook anager & runner](#git-hook-manager-&-runner)
+- husky as [Git Hook manager & runner](#git-hook-manager-&-runner)
 
-…are (unfortunately) written in JavaScript for [Node.js][], [Yarn][]/[NPM][] is required to manage these packages.
+…are (unfortunately) written in JavaScript for [Node.js][], [npm][]/[Yarn][] is required to manage these packages.
 
-The [`package.json`][npm-docs-pkg.json] and [`.yarnrc`][yarn-docs-yarnrc] files declare [Node.js][] specific configurations like the development dependencies and the [`exact`][npm-docs-config#save_exact] and [`save-prefix`][npm-docs-config#save_prefix] version resolution strategy. Yarn is as the main package manager so NPM's [`package-lock.json`][npm-docs-pkg-lock.json] file should never be created and tracked in order to prevent conflicts with the [`yarn.lock`][yarn-docs-yarn.lock] file.
+The [`package.json`][npm-docs-pkg.json] and [`.npmrc`][npm-docs-v7-npmrc] files declare [Node.js][] specific configurations like the development dependencies and the [`package-lock`][npm-docs-config#package-lock], [`save-exact`][npm-docs-config#save-exact] and [`save-prefix`][npm-docs-config#save-prefix] version resolution strategy. npm is the main package manager so Yarn‘s [`yarn.lock`][yarn-docs-yarn.lock] file should not be used and tracked in order to prevent conflicts with the [`package-lock.json`][npm-docs-pkg-lock.json] file.
+
+Note that as of [version `0.9.0`][gh-ms-9] the minimum versions for npm is [`>=7.7.0`][gh-npm/cli-rel-v7.7.0], bundled with [Node `>=15.13.0`][node-dist-v15.13.0], in order to use the `run` and `exec` commands with [workspaces][npm-docs-ws].
 
 ### Git
 
@@ -139,7 +141,7 @@ One of the main features of Prettier is its configuration: It already provides t
 The only option that was adjusted for this template repository is the [print width][prettier-docs-opt#pwidth]. It is set to `80` by default which is not up-to-date for modern screens (might only be relevant when working in [TUI][wikip-tui]s like e.g. [Vim][]). It has been changed to `120` like defined in [all of my style guides][gh-arcticicestudio-repos-q-stg].
 The `prettier.config.js` configuration file is placed in the project root as well as the `.prettierignore` file that defines ignore pattern.
 
-To allow to format all sources a `format:pretty` Yarn/NPM package script is available that also runs in the main `format` script flow. The `lint:pretty` script allows to check if all supported files are formatted correctly and is also included in the main `lint` script flow.
+To allow to format all sources a `format:pretty` npm package script is available that also runs in the main `format` script flow. The `lint:pretty` script allows to check if all supported files are formatted correctly and is also included in the main `lint` script flow.
 
 ### Markdown Linting
 
@@ -151,12 +153,12 @@ remark-lint on the other side is built on top of [remark][], the powerful Markdo
 Another decision point for remark-lint was the fact that Prettier (see section [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter)) so Node.js is already a development dependency anyway. This also allows to add other awesome projects that are (unfortunately) written in JavaScript and for which there is no comparable alternative.
 
 remark-lint can be used via [remark-cli][npm-remark-cli] and a rule preset. This preset is [remark-preset-lint-arcticicestudio][gh-arcticicestudio/remark-preset-lint-arcticicestudio], my custom preset that implements my [Markdown Style Guide][arcticicestudio-stg-markdown].
-Since the custom preset is still in major version `0` the version range is currently `>=0.x.x <1.0.0` to avoid the “SemVer Major Zero Caveat”. When defining package versions with the the carat `^` or tilde `~` range selector it won‘t affect packages with a major version of `0`. Yarn/NPM will resolve these packages to their exact version until the major version is greater or equal to `1`.
+Since the custom preset is still in major version `0` the version range is currently `>=0.x.x <1.0.0` to avoid the “SemVer Major Zero Caveat”. When defining package versions with the the carat `^` or tilde `~` range selector it won‘t affect packages with a major version of `0`. npm will resolve these packages to their exact version until the major version is greater or equal to `1`.
 To avoid this caveat the more detailed version range `>=0.x.x <1.0.0` is used to resolve all versions greater or equal to `0.x.x` but less than `1.0.0`. This will always use the latest `0.x.x` version and removes the need to increment the version manually on each new release.
 
 The `.remarkrc.js` configuration file is placed in the project root as well as the `.remarkignore` file that defines ignore pattern.
 
-To allow to run the Markdown linting separately the `lint:md` Yarn/NPM package script is available and included in the main `lint` script flow.
+To allow to run the Markdown linting separately the `lint:md` npm package script is available and included in the main `lint` script flow.
 
 ### Automatic Pre-Commit Linting
 
@@ -251,6 +253,8 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-docs-sec_vuls-dependabot_config]: https://docs.github.com/en/free-pro-team@latest/github/managing-security-vulnerabilitiesconfiguring-dependabot-security-updates
 [gh-feat-actions]: https://github.com/features/actions
 [gh-features]: https://github.com/features
+[gh-ms-9]: https://github.com/svengreb/tmpl/milestone/9
+[gh-npm/cli-rel-v7.7.0]: https://github.com/npm/cli/releases/tag/v7.7.0
 [gh-tree-dot_github]: https://github.com/svengreb/tmpl/tree/main/.github
 [git-book-hooks]: https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
 [git-crypt]: https://github.com/AGWA/git-crypt
@@ -268,11 +272,15 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [lefthook]: https://github.com/Arkweid/lefthook
 [license-mit]: https://opensource.org/licenses/MIT
 [lint-staged]: https://github.com/okonet/lint-staged
+[node-dist-v15.13.0]: https://nodejs.org/dist/v15.13.0
 [node.js]: https://nodejs.org
-[npm-docs-config#save_exact]: https://docs.npmjs.com/cli/v6/using-npm/config#save-exact
-[npm-docs-config#save_prefix]: https://docs.npmjs.com/cli/v6/using-npm/config#save-prefix
+[npm-docs-config#package-lock]: https://docs.npmjs.com/cli/v6/using-npm/config#package-lock
+[npm-docs-config#save-exact]: https://docs.npmjs.com/cli/v6/using-npm/config#save-exact
+[npm-docs-config#save-prefix]: https://docs.npmjs.com/cli/v6/using-npm/config#save-prefix
 [npm-docs-pkg-lock.json]: https://docs.npmjs.com/files/package-lock.json
 [npm-docs-pkg.json]: https://docs.npmjs.com/files/package.json
+[npm-docs-v7-npmrc]: https://docs.npmjs.com/cli/v7/configuring-npm/npmrc
+[npm-docs-ws]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
 [npm-remark-cli]: https://www.npmjs.com/package/remark-cli
 [npm]: https://www.npmjs.com
 [prettier-docs-opt#pwidth]: https://prettier.io/docs/en/options.html#print-width
@@ -289,5 +297,4 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [wikip-svg]: https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 [wikip-tui]: https://en.wikipedia.org/wiki/Text-based_user_interface
 [yarn-docs-yarn.lock]: https://yarnpkg.com/lang/en/docs/yarn-lock
-[yarn-docs-yarnrc]: https://yarnpkg.com/lang/en/docs/yarnrc
 [yarn]: https://yarnpkg.com
