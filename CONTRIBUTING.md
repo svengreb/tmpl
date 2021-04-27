@@ -125,23 +125,15 @@ A style guide establishes and enforces style to improve the intelligibility and 
 
 tmpl adheres to the [Arctic Ice Studio JavaScript Style Guide][gh-styleguide-javascript].
 
-[![][gh-styleguide-javascript-badge]][gh-styleguide-javascript]
-
 ### Markdown Style Guide
 
 tmpl adheres to the [Arctic Ice Studio Markdown Style Guide][gh-styleguide-markdown].
-
-[![][gh-styleguide-markdown-badge]][gh-styleguide-markdown]
 
 ### Git Commit Messages
 
 A well-crafted Git commit message is the best way to communicate _context_ about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
 
-tmpl adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git].
-
-[![][gh-styleguide-git-badge]][gh-styleguide-git]
-
-The style guide assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model.
+tmpl adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git]. The style guide assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model.
 
 ## MCVE
 
@@ -153,7 +145,7 @@ When [reporting a bug](#bug-reports), sometimes even when [suggesting enhancemen
 - …Complete – Provide all parts needed to reproduce the behavior
 - …Verifiable – Test the code you're about to provide to make sure it reproduces the behavior
 
-A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][sscce], a _Short, Self Contained, Correct (Compilable), Example_.
+A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][], a _Short, Self Contained, Correct (Compilable), Example_.
 
 The recommended way for GitHub based projects is to create it as [Gist][gh-gist] or new repository, but of course you can [attach it to issues and pull requests as files][ghd-attach-file], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][ghd-markdown-code-blocks] into the issue.
 
@@ -205,11 +197,8 @@ Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os
 [gh-pr]: https://github.com/svengreb/tmpl/pulls
 [gh-profile-repo-search]: https://github.com/svengreb?&tab=repositories&q=tmpl
 [gh-releases-latest]: https://github.com/svengreb/tmpl/releases/latest
-[gh-styleguide-git-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-git/develop/assets/styleguide-git-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-styleguide-javascript-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/develop/assets/styleguide-javascript-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-javascript]: https://github.com/arcticicestudio/styleguide-javascript
-[gh-styleguide-markdown-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-markdown/develop/assets/styleguide-markdown-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-markdown]: https://github.com/arcticicestudio/styleguide-markdown
 [gh-tmpl]: https://github.com/svengreb/tmpl
 [ghd-attach-file]: https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests

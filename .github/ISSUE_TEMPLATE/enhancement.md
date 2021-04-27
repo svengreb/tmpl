@@ -14,7 +14,7 @@ This section and the instructions in the sections below are only part of this is
 Please do your best to provide as much information as possible and use a clear and descriptive title for your enhancement suggestion to help maintainers and the community understand and reproduce the behavior, find related reports and to resolve the ticket faster.
 
 - **Ensure the enhancement has not already been reported by using the [GitHub Issues search](https://github.com/svengreb/tmpl/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
-- **Ensure your contribution belongs to the correct [baee or specialized template repository](https://github.com/svengreb?&tab=repositories&q=tmpl).**
+- **Ensure your contribution belongs to the correct [base or specialized template repository](https://github.com/svengreb?&tab=repositories&q=tmpl).**
 - **Check if the enhancement has already been implemented** — use the [latest version](https://github.com/svengreb/tmpl/releases/latest) and [`main`](https://github.com/svengreb/tmpl/tree/main) branch to ensure that the feature or improvement has not already been added.
 
 ## Metadata Head

@@ -3,10 +3,11 @@
 # Copyright (c) 2020-present Sven Greb <development@svengreb.de>
 # This source code is licensed under the MIT license found in the LICENSE file.
 
-# The configuration for husky.
+# Git "pre-commit" hook for husky.
 #
 # References:
 #   1. https://github.com/typicode/husky
+#   2. https://git-scm.com/docs/githooks#_pre_commit
 
 . "$(dirname "$0")/_/husky.sh"
 

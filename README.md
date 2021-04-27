@@ -86,6 +86,7 @@ The [`.github/PULL_REQUEST_TEMPLATE.md`][gh-docs-comm-pr_tmpl] file is automatic
 #### CI/CD Action Workflow
 
 The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
+To skip a workflow, include a [supported keyword like `[skip actions]`][gh-blog-cl-skip_actions] in a commit message.
 
 #### Automated Dependency Updates
 
@@ -190,7 +191,7 @@ There are multiple ways to use this template repository, either by [using GitHub
 
 1. Adjust the [`.github/CODEOWNERS`][gh-blob-codeowners] and [`.mailmap`][gh-blob-mailmap] files to use mappings for your project contributors and team members.
 2. Adjust [files related to GitHub features](#github) like the [CI/CD action workflow](#cicd-action-workflow), [issue](#issue-templates) & [pull request](#pull-request-template) templates, [code owners](#code-owners) and any other file located in the [`github` directory][gh-tree-dot_github] to match your project.
-3. Adjust documentations like the [README][gh-blob-readme], [changelog][gh-blob-changelog], [code of conduct][gh-blob-coc] and [contribution guides][gh-blob-contrib] to match your project.
+3. Adjust documentations like the [README][gh-blob-readme], [changelog][gh-blob-changelog], [code of conduct][gh-blob-coc] and [contribution guides][contrib-guide] to match your project.
 4. Adjust the [`package.json`][gh-blob-pkg.json] file to match your project.
 5. Adjust the [`dependabot.yml`][gh-blob-dot_github-dependabot.yml] file to match your project.
 6. Adjust all copyright notices to match your project.
@@ -229,12 +230,12 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-blob-changelog]: https://github.com/svengreb/tmpl/blob/main/CHANGELOG.md
 [gh-blob-coc]: https://github.com/svengreb/tmpl/blob/main/CODE_OF_CONDUCT.md
 [gh-blob-codeowners]: https://github.com/svengreb/tmpl/blob/main/.github/CODEOWNERS
-[gh-blob-contrib]: https://github.com/svengreb/tmpl/blob/main/CONTRIBUTING.md
 [gh-blob-dot_github-dependabot.yml]: https://github.com/svengreb/tmpl-go/blob/main/.github/dependabot.yml
 [gh-blob-license]: https://github.com/svengreb/tmpl/blob/main/LICENSE
 [gh-blob-mailmap]: https://github.com/svengreb/tmpl/blob/main/.mailmap
 [gh-blob-pkg.json]: https://github.com/svengreb/tmpl/blob/main/package.json
 [gh-blob-readme]: https://github.com/svengreb/tmpl/blob/main/README.md
+[gh-blog-cl-skip_actions]: https://github.blog/changelog/2021-02-08-github-actions-skip-pull-request-and-push-workflows-with-skip-ci
 [gh-blog-dependabot]: https://github.blog/2020-06-01-keep-all-your-packages-up-to-date-with-dependabot
 [gh-docs-act-ref-syntax]: https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
 [gh-docs-act]: https://docs.github.com/en/free-pro-team@latest/actions
