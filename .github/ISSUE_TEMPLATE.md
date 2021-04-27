@@ -8,6 +8,6 @@ To keep the backlog clean and actionable, issues should be opened using [one the
 
 ### Support
 
-If you got a question or need help with any aspect of the project feel free to ask and ensure to read the [extensive project documentations](https://nordtheme.com/docs).
+If you got a question or need help with any aspect of the project feel free to ask and ensure to read the [extensive project documentations](https://github.com/svengreb/tmpl/blob/main/README.md).
 
 You can also search for already opened and related issue using the search for the [“question“](https://github.com/svengreb/tmpl/labels/type-question) issue label.

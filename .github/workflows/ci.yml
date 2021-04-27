@@ -23,10 +23,10 @@ jobs:
           echo "Workflow Actor: $GITHUB_ACTOR"
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: "Setup Node.js version 14.x"
+      - name: "Setup Node.js version 15"
         uses: actions/setup-node@v2.1.5
         with:
-          node-version: "15.13.x"
+          node-version: "15"
       - name: Install Node modules
         run: npm install
       - name: Run linters

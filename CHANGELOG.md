@@ -32,8 +32,8 @@ This change also comes with updates to all documentations, including the additio
 ↠ Bumped outdated Go module dependencies and GitHub actions to their latest versions:
 
 - #67, #68, #69 (⊶ 8bff7a5d, 46a92f0a, 14a9108e) [`actions/setup-node`][gh-actions/setup-node] from [v2.1.2 to v2.1.5][gh-actions/setup-node-comp-v2.1.2_v2.1.5]
-- #74 ⇄ #75 (⊶ d827dbf5) [husky][gh-typicode/husky] — Bumped minimum version from [`v4.3.0` to `v6.0.0`][gh-typicode/husky-comp-v4.3.0_v6.0.0]. This also includes some breaking changes that require migrations. Run the official migration CLI to automatically migrate from v4 to v6: `npx husky-init && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config`
-- #74 ⇄ #75 (⊶ d827dbf5) [lint-staged][gh-okonet/lint-staged] — Bumped minimum version from [`v10.5.1` to `v10.5.4`][gh-okonet/lint-staged-comp-v10.5.1_v10.5.4].
+- #74 ⇄ #75 (⊶ d827dbf5) [husky][] — Bumped minimum version from [`v4.3.0` to `v6.0.0`][gh-typicode/husky-comp-v4.3.0_v6.0.0]. This also includes some breaking changes that require migrations. Run the official migration CLI to automatically migrate from v4 to v6: `npx husky-init && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config`
+- #74 ⇄ #75 (⊶ d827dbf5) [lint-staged][] — Bumped minimum version from [`v10.5.1` to `v10.5.4`][gh-okonet/lint-staged-comp-v10.5.1_v10.5.4].
 - #74 ⇄ #75 (⊶ d827dbf5) [remark-cli][gh-remarkjs/remark] — Bumped minimum version from [`v8.0.1` to `v9.0.0`][gh-remarkjs/remark-comp-v8.0.1_v9.0.0].
 
 </details>
@@ -140,8 +140,8 @@ Basically #22 was reverted, taking the changes from #23 into account, so that SV
 ↠ Bumped outdated Node.js package dependencies & GitHub Actions to their latest versions:
 
 - #54 (⊶ 41e11b94) [`actions/setup-node`][gh-actions/setup-node] from [v1 to v2.1.2][gh-actions/setup-node-comp-v1_v2.1.2] — v2 comes with speed and performance improvements by using a dedicated, built-in image cache for Node.js distributions.
-- #55 (⊶ d1e3d538) [`lint-staged`][gh-lint-staged] from [10.2.11 to 10.5.12][gh-lint-staged-comp-v10.2.11_v10.5.1]
-- #56 (⊶ 22652c51) [`husky`][gh-husky] from [4.2.5 to 4.3.0][gh-husky-comp-v4.2.5_v4.3.0]
+- #55 (⊶ d1e3d538) [`lint-staged`][lint-staged] from [10.2.11 to 10.5.12][gh-lint-staged-comp-v10.2.11_v10.5.1]
+- #56 (⊶ 22652c51) [`husky`][husky] from [4.2.5 to 4.3.0][gh-husky-comp-v4.2.5_v4.3.0]
 - #57 (⊶ 17378a12) [`prettier`][prettier] from [2.0.5 to 2.1.2][gh-prettier-comp-2.0.5_2.1.2]
 
 </details>
@@ -525,7 +525,7 @@ The `.huskyrc.js` configuration file is placed in the project root and includes 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/13448100/91175894-c4159400-e6e1-11ea-893d-84c1b561fe31.png" /></p>
 
-↠ Using [GitHub Actions][gh-actions] brings many advantages like a „close-to-the-source“ development pipeline. Having the code and automated pipelines/workflows in one place is worth a lot. This also comes along with the perfect and smooth integrations into GitHub platform and page itself like status reports on PRs and many more possibilities like the [customization and triggering of workflows through webhooks][gh-docs-actions-events] for almost every event that can occur in a repository/issue/PR etc.
+↠ Using [GitHub Actions][gh-docs-actions] brings many advantages like a „close-to-the-source“ development pipeline. Having the code and automated pipelines/workflows in one place is worth a lot. This also comes along with the perfect and smooth integrations into GitHub platform and page itself like status reports on PRs and many more possibilities like the [customization and triggering of workflows through webhooks][gh-docs-actions-events] for almost every event that can occur in a repository/issue/PR etc.
 
 <p align="center">
   <figure>
@@ -651,6 +651,9 @@ otherwise Markdown elements are not parsed and rendered!
 <!-- Shared -->
 
 [gh-actions/setup-node]: https://github.com/actions/setup-node
+[gh-docs-actions]: https://docs.github.com/en/actions
+[husky]: https://github.com/typicode/husky
+[lint-staged]: https://github.com/okonet/lint-staged
 [prettier]: https://prettier.io
 [shields.io]: https://shields.io
 [yarn-docs-lock]: https://yarnpkg.com/lang/en/docs/yarn-lock
@@ -663,7 +666,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-13]: https://github.com/svengreb/tmpl/issues/13
 [gh-15]: https://github.com/svengreb/tmpl/issues/15
 [gh-17]: https://github.com/svengreb/tmpl/issues/17
-[gh-actions]: https://docs.github.com/en/actions
 [gh-blog-codeowner_intro]: https://github.blog/2017-07-06-introducing-code-owners
 [gh-blog-community_tools]: https://github.blog/2017-06-14-new-community-tools
 [gh-blog-contrib_guidelines]: https://github.blog/2012-09-17-contributing-guidelines
@@ -672,7 +674,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-comm_profile]: https://github.com/svengreb/tmpl/community
 [gh-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl/compare/0b0d7aee...v0.1.0
 [gh-docs-actions-events]: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events
-[gh-docs-actions]: https://docs.github.com/en/actions
 [gh-docs-coc]: https://docs.github.com/en/github/building-a-strong-community/adding-a-code-of-conduct-to-your-project
 [gh-docs-contrib-guide]: https://docs.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors
 [gh-docs-issue_pr_tmpl]: https://docs.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates
@@ -693,9 +694,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gofmt]: https://golang.org/cmd/gofmt
 [goldmark]: https://github.com/yuin/goldmard
 [husky-hooks]: https://github.com/typicode/husky/blob/master/DOCS.md#supported-hooks
-[husky]: https://github.com/typicode/husky
 [lefthook]: https://github.com/Arkweid/lefthook
-[lint-staged]: https://github.com/okonet/lint-staged
 [markdown]: https://en.wikipedia.org/wiki/Markdown
 [mit]: https://opensource.org/licenses/MIT
 [nodejs]: https://nodejs.org
@@ -721,7 +720,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-docs-actions-wf#on_pull]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
 [gh-docs-actions-wf#on_push_pull]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
 [goland]: https://www.jetbrains.com/go
-[intellij]: https://www.jetbrains.com
+[intellij]: https://www.jetbrains.com/idea
 [jetbrains-plugins]: https://plugins.jetbrains.com
 [jetbrains]: https://www.jetbrains.com
 
@@ -756,9 +755,7 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-actions/setup-node-comp-v1_v2.1.2]: https://github.com/actions/setup-node/compare/v1...v2.1.2
 [gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/svengreb/tmpl/compare/v0.6.0...v0.7.0
 [gh-husky-comp-v4.2.5_v4.3.0]: https://github.com/typicode/husky/compare/v4.2.5...v4.3.0
-[gh-husky]: https://github.com/typicode/husky
 [gh-lint-staged-comp-v10.2.11_v10.5.1]: https://github.com/okonet/lint-staged/compare/v10.2.11...v10.5.1
-[gh-lint-staged]: https://github.com/okonet/lint-staged
 [gh-prettier-comp-2.0.5_2.1.2]: https://github.com/prettier/prettier/compare/2.0.5...2.1.2
 
 <!-- v0.8.0 -->
@@ -782,12 +779,10 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-compare-tag-v0.8.0_v0.9.0]: https://github.com/svengreb/tmpl/compare/v0.8.0...v0.9.0
 [gh-npm/cli-rel-v7.7.0]: https://github.com/npm/cli/releases/tag/v7.7.0
 [gh-okonet/lint-staged-comp-v10.5.1_v10.5.4]: https://github.com/typicode/husky/compare/v10.5.1...v10.5.4
-[gh-okonet/lint-staged]: https://github.com/okonet/lint-staged
 [gh-remarkjs/remark-comp-v8.0.1_v9.0.0]: https://github.com/typicode/husky/compare/v8.0.1...v9.0.0
 [gh-remarkjs/remark]: https://github.com/remarkjs/remark/releases
 [gh-sindresorhus/ama-479#c-310661514]: https://github.com/sindresorhus/ama/issues/479#issuecomment-310661514
 [gh-typicode/husky-comp-v4.3.0_v6.0.0]: https://github.com/typicode/husky/compare/v4.3.0...v6.0.0
-[gh-typicode/husky]: https://github.com/typicode/husky
 [gh-yarnpkg/berry]: https://github.com/yarnpkg/berry
 [node-dist-v15.13.0]: https://nodejs.org/dist/v15.13.0
 [npm-blog-v7_keep_lock]: https://blog.npmjs.org/post/621733939456933888/npm-v7-series-why-keep-package-lockjson.html

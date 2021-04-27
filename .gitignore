@@ -1,7 +1,7 @@
 # Copyright (c) 2020-present Sven Greb <development@svengreb.de>
 # This source code is licensed under the MIT license found in the LICENSE file.
 
-# Configuration to specify paths to ignore.
+# Path match pattern to intentionally ignore untracked files and directories.
 # See https://git-scm.com/docs/gitignore for more details.
 
 # +--------------------+
