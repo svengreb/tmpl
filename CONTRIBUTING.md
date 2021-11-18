@@ -6,40 +6,40 @@ This is a set of guidelines for contributing to tmpl. Please take a moment to re
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
 
-As for everything else in the project, the contributions to tmpl are governed by our [Code of Conduct][gh-coc]. By participating, you are expected to uphold this code. Please report unacceptable behavior at support@svengreb.de or directly to one of the core team members via [email][gh-mailmap].
+As for everything else in the project, the contributions to tmpl are governed by our [Code of Conduct][4]. By participating, you are expected to uphold this code. Please report unacceptable behavior at support@svengreb.de or directly to one of the core team members via [email][12].
 
 ## Getting Started
 
 tmpl is an open source project and we love to receive contributions from the community! There are many ways to contribute, from [writing- and improving documentation and tutorials](#documentations), [reporting bugs](#bug-reports), [submitting enhancement suggestions](#enhancement-suggestions) which can be incorporated into this project by [submitting a pull request](#pull-requests).
 
-The project development workflow and process uses [GitHub Issues][gh-issues]- and [Pull Requests][gh-pr] management to track issues and pull requests including multiple [issue templates][gh-issues-templates].
+The project development workflow and process uses [GitHub Issues][11]- and [Pull Requests][13] management to track issues and pull requests including multiple [issue templates][10].
 
-Before you continue with these contribution guidelines we highly recommend to read the awesome GitHub [Open Source Guides][os-guide] on how to [making open source contributions][os-guide-contrib].
+Before you continue with these contribution guidelines we highly recommend to read the awesome GitHub [Open Source Guides][27] on how to [making open source contributions][26].
 
 ### Repository Assignment
 
-tmpl is [a modular project][gh-profile-repo-search] of multiple [template repositories][ghd-repos-tmpl]. Each repository has a different focus for different use cases, project structures and programming languages.
+tmpl is [a modular project][14] of multiple [template repositories][23]. Each repository has a different focus for different use cases, project structures and programming languages.
 
 **Please make sure to determine the correct repository before you continue!**
-Contributions related to a [specialized template][gh-profile-repo-search] belongs to the specific repository while contributions related to [this base template][gh-tmpl] are welcome in this repository. This helps all core team members, committers and maintainer to process every contribution faster without organization overhead.
+Contributions related to a [specialized template][14] belongs to the specific repository while contributions related to [this base template][19] are welcome in this repository. This helps all core team members, committers and maintainer to process every contribution faster without organization overhead.
 
 ### Bug Reports
 
 A bug is a _demonstrable problem_ that is caused by the code in the repository. This section guides you through submitting a bug report for tmpl. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
 
-**Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][gh-mailmap] or via support@svengreb.de. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
+**Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][12] or via support@svengreb.de. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
 
-- **Use the [GitHub Issue search][gh-issues]** — check if the issue has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one. If you find a closed issue that seems like it is the same thing that you are experiencing, open a new issue and include a link to the original issue in the body of your new one.
+- **Use the [GitHub Issue search][11]** — check if the issue has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one. If you find a closed issue that seems like it is the same thing that you are experiencing, open a new issue and include a link to the original issue in the body of your new one.
 - **Determine [which repository the contribution belongs to](#repository-assignment).**
-- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`main`][gh-branch-main] branch in the repository.
+- **Check if the issue has been fixed** — try to reproduce it using the [latest version][15] and [`main`][2] branch in the repository.
 - **Isolate the problem** — ideally create a [MCVE](#mcve).
 
-When you are creating a bug report, please provide as much detail and context as possible. Fill out on of [the required templates][gh-issues-template-bug], the information it asks helps maintainers to reproduce the problem and resolve issues faster.
+When you are creating a bug report, please provide as much detail and context as possible. Fill out on of [the required templates][7], the information it asks helps maintainers to reproduce the problem and resolve issues faster.
 
 - **Use a clear and descriptive title** for the issue to identify the problem.
 - **Describe the exact steps which reproduce the problem** in as many details as possible.
 - **Include screenshots and animated GIFs** if appropriate which show you following the described steps and clearly demonstrate the problem.
-- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets. If you are providing snippets in the issue, use [Markdown code blocks][ghd-markdown-code-blocks] or [attach files to the issue][ghd-attach-file].
+- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets. If you are providing snippets in the issue, use [Markdown code blocks][22] or [attach files to the issue][20].
 
 If possible please provide more context by answering these questions:
 
@@ -48,22 +48,22 @@ If possible please provide more context by answering these questions:
   - What is the most recent version in which the problem does not happen?
 - **Can you reliably reproduce the issue?** If not, please provide details about how often the problem happens and under which conditions it normally happens.
 
-Please include details about your configuration and environment based on the [issue template][gh-issues-template-bug].
+Please include details about your configuration and environment based on the [issue template][7].
 
 ### Enhancement Suggestions
 
 This section guides you through submitting an enhancement suggestion, including completely new features and minor improvements to existing functionality. Following these guidelines helps maintainers and the community understand your suggestion and find related suggestions.
 
-- **Use the [GitHub Issues search][gh-issues]** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one.
+- **Use the [GitHub Issues search][11]** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one.
 - **Determine [which repository the contribution belongs to](#repository-assignment).**
-- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`main`][gh-branch-main] branch to ensure that the feature or improvement has not already been added.
+- **Check if the enhancement has already been implemented** — use the [latest version][15] and [`main`][2] branch to ensure that the feature or improvement has not already been added.
 - **Provide a reduced show case** — ideally create a [MCVE](#mcve).
 
-Before creating enhancement suggestions, please check if your idea fits with the scope and provide as much detail and context as possible using a structured layout like the [the issue template][gh-issues-template-enhancement].
+Before creating enhancement suggestions, please check if your idea fits with the scope and provide as much detail and context as possible using a structured layout like the [the issue template][8].
 
 - **Use a clear and descriptive title** for the issue to identify the suggestion.
 - **Provide a step-by-step description of the suggested enhancement** in as many details as possible and provide use-cases.
-- **Provide examples to demonstrate the need of an enhancement**. Include copy/paste snippets which you use in those examples, use [Markdown code blocks][ghd-markdown-code-blocks] or [attach files to the issue][ghd-attach-file].
+- **Provide examples to demonstrate the need of an enhancement**. Include copy/paste snippets which you use in those examples, use [Markdown code blocks][22] or [attach files to the issue][20].
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
 - **Explain why this enhancement would be useful** to most tmpl users.
 - **Maybe list some other projects where this enhancement exists.**
@@ -74,18 +74,18 @@ This section guides you through submitting an pull request. Following these guid
 
 **Please [suggest an enhancement](#enhancement-suggestions) or [report a bug](#bug-reports) first before embarking on any significant pull request** (e.g. implementing features, refactoring code, fixing a bug), otherwise you risk spending a lot of time working on something that the core team members and project owner might not want to merge into the project.
 
-When you are submitting an pull request, please provide as much detail and context as possible. Fill out [the required template][gh-issues-template-pr] to help maintainers to understand your submitted code.
+When you are submitting an pull request, please provide as much detail and context as possible. Fill out [the required template][9] to help maintainers to understand your submitted code.
 
 - **Use a clear and descriptive title for the pull request**
-- **Do not include issue numbers in the pull request title** but fill in the metadata section at the top of the [required pull request template][gh-issues-template-pr] making use of the [GitHub issue keywords][ghd-issue-keywords] to link to specific [enhancement suggestions](#enhancement-suggestions) or [bug reports](#bug-reports).
+- **Do not include issue numbers in the pull request title** but fill in the metadata section at the top of the [required pull request template][9] making use of the [GitHub issue keywords][21] to link to specific [enhancement suggestions](#enhancement-suggestions) or [bug reports](#bug-reports).
 - **Include screenshots and animated GIFs** if appropriate which show you following the described steps and clearly demonstrate the change.
 - **Make sure to follow the [JavaScript](#javascript-style-guide), [Markdown](#markdown-style-guide) and [Git](#git-style-guide) style guides**.
 - **Remain focused in scope and avoid to include unrelated commits**.
 - **Features and improvements should always be accompanied with tests and documentation**. If the pull request improves the performance consider to include a benchmark test, optimally including a chart.
 - **Lint and test before submitting the pull request**.
-- **Make sure to create the pull request from a [topic branch][git-docs-branching-workflows]**.
+- **Make sure to create the pull request from a [topic branch][25]**.
 
-**All pull requests must be send against the [`main`][gh-branch-main] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
+**All pull requests must be send against the [`main`][2] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
 
 ### Documentations
 
@@ -95,7 +95,7 @@ You can help improve the docs and guides by making them more coherent, consisten
 
 ## Branch Organization
 
-tmpl uses the [GitHub Flow][ghg-flow] branching model. The repository consists of the `main` core branch with an infinite development lifecycle. The source code of `HEAD` in this branch contains the latest development state and reflects all tagged release versions.
+tmpl uses the [GitHub Flow][24] branching model. The repository consists of the `main` core branch with an infinite development lifecycle. The source code of `HEAD` in this branch contains the latest development state and reflects all tagged release versions.
 
 **All [pull requests](#pull-requests) for limited development lifecycle _story_/_topic_ branches must be send against the `main` branch**.
 
@@ -113,7 +113,7 @@ Some issues are created with missing information, not reproducible, or plain inv
 
 We're always looking for more opinions on discussions in issues and pull request reviews which is a good opportunity to influence the future direction of tmpl.
 
-The [question][gh-issues-label-question] issue label is a good place to find ongoing discussions and questions.
+The [question][6] issue label is a good place to find ongoing discussions and questions.
 
 ## Style Guides
 
@@ -123,17 +123,17 @@ A style guide establishes and enforces style to improve the intelligibility and 
 
 ### JavaScript Style Guide
 
-tmpl adheres to the [Arctic Ice Studio JavaScript Style Guide][gh-styleguide-javascript].
+tmpl adheres to the [Arctic Ice Studio JavaScript Style Guide][17].
 
 ### Markdown Style Guide
 
-tmpl adheres to the [Arctic Ice Studio Markdown Style Guide][gh-styleguide-markdown].
+tmpl adheres to the [Arctic Ice Studio Markdown Style Guide][18].
 
 ### Git Commit Messages
 
 A well-crafted Git commit message is the best way to communicate _context_ about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
 
-tmpl adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git]. The style guide assumes that you are familiar with the [GitHub Flow][ghg-flow] branching model.
+tmpl adheres to the [Arctic Ice Studio Git Style Guide][16]. The style guide assumes that you are familiar with the [GitHub Flow][24] branching model.
 
 ## MCVE
 
@@ -145,9 +145,9 @@ When [reporting a bug](#bug-reports), sometimes even when [suggesting enhancemen
 - …Complete – Provide all parts needed to reproduce the behavior
 - …Verifiable – Test the code you're about to provide to make sure it reproduces the behavior
 
-A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][], a _Short, Self Contained, Correct (Compilable), Example_.
+A MCVE is a common practice like on [Stack Overflow][32] and sometimes it is also called [SSCCE][31], a _Short, Self Contained, Correct (Compilable), Example_.
 
-The recommended way for GitHub based projects is to create it as [Gist][gh-gist] or new repository, but of course you can [attach it to issues and pull requests as files][ghd-attach-file], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][ghd-markdown-code-blocks] into the issue.
+The recommended way for GitHub based projects is to create it as [Gist][5] or new repository, but of course you can [attach it to issues and pull requests as files][20], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][22] into the issue.
 
 ### Minimal
 
@@ -174,43 +174,43 @@ To entirely understand your enhancement or bug report, developers will need to v
 
 ## Versioning
 
-tmpl follows the [Semantic Versioning Specification][semver] (SemVer). We release patch versions for bug fixes, minor versions for enhancements like new features and improvements, and major versions for any backwards incompatible changes. Deprecation warnings are introduced for breaking changes in a minor version so that users learn about the upcoming changes and migrate their code in advance.
+tmpl follows the [Semantic Versioning Specification][30] (SemVer). We release patch versions for bug fixes, minor versions for enhancements like new features and improvements, and major versions for any backwards incompatible changes. Deprecation warnings are introduced for breaking changes in a minor version so that users learn about the upcoming changes and migrate their code in advance.
 
-Every significant change is documented in the [changelog][gh-changelog].
+Every significant change is documented in the [changelog][3].
 
 ## Credits
 
-Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os-guide] and various contribution guides of large open source projects like [Atom][gh-atom-contrib], [React][react-contrib] and [Ruby on Rails][ruby-on-rails-contrib].
+Thanks for the inspirations and attributions to GitHub's [Open Source Guides][27] and various contribution guides of large open source projects like [Atom][1], [React][28] and [Ruby on Rails][29].
 
-[gh-atom-contrib]: https://github.com/atom/atom/blob/master/CONTRIBUTING.md
-[gh-branch-main]: https://github.com/svengreb/tmpl/tree/main
-[gh-changelog]: https://github.com/svengreb/tmpl/blob/main/CHANGELOG.md
-[gh-coc]: https://github.com/svengreb/tmpl/blob/main/CODE_OF_CONDUCT.md
-[gh-gist]: https://gist.github.com
-[gh-issues-label-question]: https://github.com/svengreb/tmpl/labels/type-question
-[gh-issues-template-bug]: https://github.com/svengreb/tmpl/blob/main/.github/ISSUE_TEMPLATE/bugs.md
-[gh-issues-template-enhancement]: https://github.com/svengreb/tmpl/blob/main/.github/ISSUE_TEMPLATE/enhancement.md
-[gh-issues-template-pr]: https://github.com/svengreb/tmpl/blob/main/.github/PULL_REQUEST_TEMPLATE.md
-[gh-issues-templates]: https://github.com/svengreb/tmpl/issues/new/choose
-[gh-issues]: https://github.com/svengreb/tmpl/issues
-[gh-mailmap]: https://github.com/svengreb/tmpl/blob/main/.mailmap
-[gh-pr]: https://github.com/svengreb/tmpl/pulls
-[gh-profile-repo-search]: https://github.com/svengreb?&tab=repositories&q=tmpl
-[gh-releases-latest]: https://github.com/svengreb/tmpl/releases/latest
-[gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-styleguide-javascript]: https://github.com/arcticicestudio/styleguide-javascript
-[gh-styleguide-markdown]: https://github.com/arcticicestudio/styleguide-markdown
-[gh-tmpl]: https://github.com/svengreb/tmpl
-[ghd-attach-file]: https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests
-[ghd-issue-keywords]: https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue
-[ghd-markdown-code-blocks]: https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
-[ghd-repos-tmpl]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository
-[ghg-flow]: https://guides.github.com/introduction/flow
-[git-docs-branching-workflows]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-[os-guide-contrib]: https://opensource.guide/how-to-contribute
-[os-guide]: https://opensource.guide
-[react-contrib]: https://facebook.github.io/react/contributing/how-to-contribute.html
-[ruby-on-rails-contrib]: http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html
-[semver]: https://semver.org
-[sscce]: http://sscce.org
-[stackoverflow-mcve]: https://stackoverflow.com/help/mcve
+[1]: https://github.com/atom/atom/blob/master/CONTRIBUTING.md
+[2]: https://github.com/svengreb/tmpl/tree/main
+[3]: https://github.com/svengreb/tmpl/blob/main/CHANGELOG.md
+[4]: https://github.com/svengreb/tmpl/blob/main/CODE_OF_CONDUCT.md
+[5]: https://gist.github.com
+[6]: https://github.com/svengreb/tmpl/labels/type-question
+[7]: https://github.com/svengreb/tmpl/blob/main/.github/ISSUE_TEMPLATE/bugs.md
+[8]: https://github.com/svengreb/tmpl/blob/main/.github/ISSUE_TEMPLATE/enhancement.md
+[9]: https://github.com/svengreb/tmpl/blob/main/.github/PULL_REQUEST_TEMPLATE.md
+[10]: https://github.com/svengreb/tmpl/issues/new/choose
+[11]: https://github.com/svengreb/tmpl/issues
+[12]: https://github.com/svengreb/tmpl/blob/main/.mailmap
+[13]: https://github.com/svengreb/tmpl/pulls
+[14]: https://github.com/svengreb?&tab=repositories&q=tmpl
+[15]: https://github.com/svengreb/tmpl/releases/latest
+[16]: https://github.com/arcticicestudio/styleguide-git
+[17]: https://github.com/arcticicestudio/styleguide-javascript
+[18]: https://github.com/arcticicestudio/styleguide-markdown
+[19]: https://github.com/svengreb/tmpl
+[20]: https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests
+[21]: https://docs.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue
+[22]: https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+[23]: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-template-repository
+[24]: https://guides.github.com/introduction/flow
+[25]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[26]: https://opensource.guide/how-to-contribute
+[27]: https://opensource.guide
+[28]: https://facebook.github.io/react/contributing/how-to-contribute.html
+[29]: http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html
+[30]: https://semver.org
+[31]: http://sscce.org
+[32]: https://stackoverflow.com/help/mcve
