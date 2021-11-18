@@ -21,6 +21,8 @@
     "format": "run-s format:pretty",
     "format:pretty": "prettier --write .",
     "lint": "run-s lint:*",
+    "lint:ci": "run-s lint:md lint:ci:*",
+    "lint:ci:pretty": "prettier --loglevel silent --check .",
     "lint:md": "remark --no-stdout . \".github/**/*.md\"",
     "lint:pretty": "prettier --check .",
     "prepare:husky": "husky install",
