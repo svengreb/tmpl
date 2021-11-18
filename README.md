@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://github.com/svengreb/tmpl/releases/latest"><img src="https://img.shields.io/github/release/svengreb/tmpl.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://github.com/svengreb/tmpl/blob/master/CHANGELOG.md"><img src="https://img.shields.io/github/release/svengreb/tmpl.svg?style=flat-square&label=Changelog&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://github.com/svengreb/tmpl/actions?query=workflow%3Aci" target="_blank"><img src="https://img.shields.io/github/workflow/status/svengreb/tmpl/ci.svg?style=flat-square&label=CI&logo=github&logoColor=eceff4&colorA=4c566a"/></a></p>
+<p align="center"><a href="https://github.com/svengreb/tmpl/actions?query=workflow%3Aci-node" target="_blank"><img src="https://img.shields.io/github/workflow/status/svengreb/tmpl/ci-node.svg?style=flat-square&label=CI%20Node&logo=github&logoColor=eceff4&colorA=4c566a"/></a></p>
 
 <p align="center"><a href="https://github.com/arcticicestudio/styleguide-markdown/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-markdown.svg?style=flat-square&label=Markdown%20Style%20Guide&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOSIgaGVpZ2h0PSIzOSIgdmlld0JveD0iMCAwIDM5IDM5Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNEOERFRTkiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMS41IDEuNWgzNnYzNmgtMzZ6Ii8%2BPHBhdGggZmlsbD0iI0Q4REVFOSIgZD0iTTIwLjY4MyAyNS42NTVsNS44NzItMTMuNDhoLjU2Nmw1Ljg3MyAxMy40OGgtMS45OTZsLTQuMTU5LTEwLjA1Ni00LjE2MSAxMC4wNTZoLTEuOTk1em0tMi42OTYgMGwtMTMuNDgtNS44NzJ2LS41NjZsMTMuNDgtNS44NzJ2MS45OTVMNy45MzEgMTkuNWwxMC4wNTYgNC4xNnoiLz48L3N2Zz4%3D"/></a> <a href="https://github.com/arcticicestudio/styleguide-git/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-git.svg?style=flat-square&label=Git%20Style%20Guide&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=git"/></a></p>
 
@@ -22,7 +22,7 @@ This repository serves as the base template repository of _tmpl_ that provides e
   - …definitions for [code owners](#code-owners)
   - …individual [issue templates](#issue-templates)
   - …a extensive [pull request template](#pull-request-template)
-  - …a basic [CI/CD action workflow](#cicd-action-workflow)
+  - …basic [CI/CD action workflows](#cicd-action-workflows)
   - …[automated updates and security vulnerability alerts](#automated-dependency-updates) for dependencies through the native [Dependabot][] integration
 - Configurations for [npm and Yarn](#nodejs-npm-and-yarn)
 - Basic configurations for [Git](#git)
@@ -83,15 +83,15 @@ Note that the [`.github/ISSUE_TEMPLATE.md` file][gh-docs-issue_tmpl_legacy] is s
 
 The [`.github/PULL_REQUEST_TEMPLATE.md`][gh-docs-comm-pr_tmpl] file is automatically used as content when a contributor creates a new pull request. It can also be used for automation and [as URL query parameter value][gh-docs-autom_issue_pr_query] e.g. do directly link to it in documentations.
 
-#### CI/CD Action Workflow
+#### CI/CD Action Workflows
 
-The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
+The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes basic [CI/CD workflow files][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. There is currently one job called `lint-node` that runs all linters that are included in this template repository. See sections like [“Automatic Code and Text Formatter“](#automatic-code-and-text-formatter), [“Markdown Linting“](#markdown-linting) and [“Automatic Pre-Commit Linting“](#automatic-pre-commit-linting) below for more details.
 To skip a workflow, include a [supported keyword like `[skip actions]`][gh-blog-cl-skip_actions] in a commit message.
 
 #### Automated Dependency Updates
 
 To ensure dependencies of various package ecosystems are up-to-date, [Dependabot][] has been [natively integrated into GitHub][gh-blog-dependabot]. It creates [automated updates][gh-docs-dependabot] and [security vulnerability alerts][gh-docs-sec_vuls-alerts] for dependencies.
-The basic [`dependabot.yml` file][gh-blob-dot_github-dependabot.yml] in this template repository contains [the configuration][gh-docs-dependabot] for [GitHub Action workflows](#cicd-action-workflow) and [Node.js dependencies](#nodejs-npm-and-yarn).
+The basic [`dependabot.yml` file][gh-blob-dot_github-dependabot.yml] in this template repository contains [the configuration][gh-docs-dependabot] for [GitHub Action workflows](#cicd-action-workflows) and [Node.js dependencies](#nodejs-npm-and-yarn).
 
 Note that you must manually enable or disable [version][gh-docs-dependabot_activation] and [security][gh-docs-sec_vuls-dependabot_config] Dependabot updates per repository!
 
