@@ -27,7 +27,7 @@ This repository serves as the base template repository of _tmpl_ that provides e
 - Configurations for [npm and Yarn](#nodejs-npm-and-yarn)
 - Basic configurations for [Git](#git)
 - A [MIT license](#license)
-- [15](#editorconfig) integration
+- [EditorConfig](#editorconfig) integration
 - [Prettier][76] for [“auto-magical“ code& text formatting](#automatic-code-and-text-formatter)
 - [remark-lint][79] to [lint Markdown](#markdown-linting)
 - [lint-staged][63] for [Automatic pre-commit linting](#automatic-pre-commit-linting)

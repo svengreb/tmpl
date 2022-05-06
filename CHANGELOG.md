@@ -4,6 +4,22 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.11.0
+
+![Release Date: 2022-05-06](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2022-05-06&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/users/svengreb/projects/5/views/3) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/11)
+
+⇅ [Show all commits][154]
+
+## Improvements
+
+<details>
+<summary><strong>Opt-in Dependabot version update configuration</strong> — #94 ⇄ #95 (⊶ d34de53d)</summary>
+
+↠ The [`.github/dependabot.yml` Dependabot configuration file][155] for [automation version updates][156] that was introduced in [#52][157] often causes a lot of PR noise and does not really help since updates also often require more action than just a bump of the version number itself like migration steps or adjustments to changes (e.g. APIs or deprecated implementations). Since Dependabot is not able to fulfill this and only does a stupid increase of the version number it often creates more work than it helps. The result are often hundreds of notifications and more digital noise for developers and maintainers without any real benefit since version & security updates are done on a regular schedule by maintainers who know what they are doing and how modern software should be maintained.
+Therefore the `.github/dependabot.yml` file has been renamed to `.github/dependabot.tmpl.yml` to disable Dependabot for this repository while still allowing repositories that are based on this template repository to opt-in.
+
+</details>
+
 # 0.10.0
 
 ![Release Date: 2021-11-18](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-11-18&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/projects/13) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl/milestone/10)
@@ -695,6 +711,10 @@ See the [GitHub documentation][24] for more details about issue and pull request
 
 </details>
 
+<p align="center">Copyright &copy; 2020-present <a href="https://www.svengreb.de" target="_blank" rel="noreferrer">Sven Greb</a></p>
+
+<p align="center"><a href="https://github.com/svengreb/tmpl/blob/main/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
+
 <!--
 +------------------+
 + Formatting Notes +
@@ -725,6 +745,8 @@ otherwise Markdown elements are not parsed and rendered!
 [6]: https://shields.io
 [7]: https://yarnpkg.com/lang/en/docs/yarn-lock
 [8]: https://yarnpkg.com
+[57]: https://github.com/arcticicestudio/styleguide-markdown
+[62]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
 
 <!-- v0.1.0 -->
 
@@ -776,7 +798,6 @@ otherwise Markdown elements are not parsed and rendered!
 [54]: https://remark.js.org
 [55]: https://github.com/arcticicestudio/styleguide-git
 [56]: https://github.com/arcticicestudio/styleguide-javascript
-[57]: https://github.com/arcticicestudio/styleguide-markdown
 [58]: https://unifiedjs.com
 [59]: https://yarnpkg.com/lang/en/docs/cli/config
 [60]: https://yarnpkg.com/lang/en/docs/yarnrc
@@ -784,7 +805,6 @@ otherwise Markdown elements are not parsed and rendered!
 <!-- v0.2.0 -->
 
 [61]: https://github.com/svengreb/tmpl/compare/v0.1.0...v0.2.0
-[62]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths
 [63]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags
 [64]: https://www.jetbrains.com/go
 [65]: https://www.jetbrains.com/idea
@@ -892,3 +912,10 @@ otherwise Markdown elements are not parsed and rendered!
 [150]: https://nodejs.org/api/esm.html
 [152]: https://github.com/prettier/prettier/releases/tag/2.4.1
 [153]: https://github.com/remarkjs/remark/tree/main/packages/remark-cli
+
+<!-- v0.11.0 -->
+
+[154]: https://github.com/svengreb/tmpl/compare/v0.10.0...v0.11.0
+[155]: https://github.com/svengreb/tmpl/blob/32925a1f/.github/dependabot.yml
+[156]: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates
+[157]: https://github.com/svengreb/tmpl/issues/52
